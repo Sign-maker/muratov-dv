@@ -1,0 +1,108 @@
+@media screen and (max-width: 374px) {
+  /* ====================HERO========================== */
+  .hero-container {
+    display: block;
+  }
+  .hero-container img {
+    margin-bottom: 30px;
+  }
+  .hero-title {
+    margin-bottom: 0px;
+  }
+  /* ====================SOFT-SKILLS========================== */
+  .skills-title {
+    font-size: 24px;
+  }
+  .skill-name {
+    font-size: 18px;
+  }
+  .soft-skills-item {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  /* ====================HERO========================== */
+
+  /* ====================HARD-SKILLS========================== */
+  .hard-skills-item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 757px) {
+  /* ====================HERO========================== */
+
+  .hero-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* ====================HERO========================== */
+
+  .hero-title-wrapper {
+    gap: 28px;
+  }
+  .hero-title {
+    font-size: 48px;
+    max-width: 259px;
+  }
+
+  /* ====================SOFT-SKILLS========================== */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .soft-skills-list {
+    justify-content: center;
+  }
+
+  .skills-title {
+    font-size: 36px;
+  }
+  /* ====================HARD-SKILLS========================== */
+  .hard-skills-list {
+    gap: 24px;
+  }
+  .hard-skills-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 1199px) {
+  /* ====================HERO========================== */
+  .hero-list {
+    margin-left: -164px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* ====================HERO========================== */
+
+  .hero-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .hero-container {
+    max-width: 1050px;
+
+    gap: 40px;
+  }
+
+  .hero-container img {
+    min-width: 328px;
+  }
+  .hero-title-wrapper {
+    gap: 33px;
+  }
+
+  .hero-item:not(:last-child) {
+    margin-bottom: 33px;
+  }
+  /* ====================HARD-SKILLS========================== */
+
+  .hard-skills-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}

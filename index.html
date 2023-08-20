@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Dmytro Muratov</title>
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,11 +19,197 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Portfolio Dmytro Muratov</title>
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
-    <header><nav></nav></header>
-    <main></main>
+    <header>
+      <nav></nav>
+      <address></address>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="container hero-container">
+          <picture>
+            <source
+              srcset="
+                ./img/hero/my-photo-mobile@1x.jpg 1x,
+                ./img/hero/my-photo-mobile@2x.jpg 2x
+              "
+              type="image/jpeg"
+              media="(max-width:767px)"
+            />
+            <source
+              srcset="
+                ./img/hero/my-photo-mobile@1x.webp 1x,
+                ./img/hero/my-photo-mobile@2x.webp 2x
+              "
+              type="image/webp"
+              media="(max-width:767px)"
+            />
+            <source
+              srcset="
+                ./img/hero/my-photo-tablet@1x.jpg 1x,
+                ./img/hero/my-photo-tablet@2x.jpg 2x
+              "
+              type="image/jpeg"
+              media="(max-width:1199px)"
+            />
+            <source
+              srcset="
+                ./img/hero/my-photo-tablet@1x.webp 1x,
+                ./img/hero/my-photo-tablet@2x.webp 2x
+              "
+              type="image/webp"
+              media="(max-width:1199px)"
+            />
+            <source
+              srcset="
+                ./img/hero/my-photo-desktop@1x.jpg 1x,
+                ./img/hero/my-photo-desktop@2x.jpg 2x
+              "
+              type="image/jpeg"
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="
+                ./img/hero/my-photo-desktop@1x.webp 1x,
+                ./img/hero/my-photo-desktop@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width:1200px)"
+            />
+            <img src="./img/hero/my-photo-desktop@1x.jpg" alt="my-photo" />
+          </picture>
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">Dmyrto Muratov</h1>
+            <h2 class="question">Kim jestem?</h2>
+            <ul class="hero-list">
+              <li class="hero-item">
+                <p class="hero-text">
+                  Pracowałem jako kierownik przedsiębiorstwa zajmującego się
+                  produkcją reklamy zewnętrznej i elewacji wentylowanych w
+                  Ukrainie przed rozpoczęciem wojny.
+                </p>
+              </li>
+              <li class="hero-item">
+                <p class="hero-text">
+                  Przez 20 lat zarządzałem zespołem do 15 osób. W tym czasie
+                  wykonaliśmy „na żywo” ponad 1000 projektów reklamowych dla
+                  sklepów i elewacji budynków.
+                </p>
+              </li>
+              <li class="hero-item">
+                <p class="hero-text">
+                  Chcę dalej rozwijać swoje doświadczenie i pomagać w ozdabianiu
+                  miast Polski nowoczesną i wysokiej jakości reklamą zewnętrzną.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="soft-skills-section">
+        <div class="container skills-container">
+          <h2 class="question skills-question">
+            Jakie zadania mogę wykonywać?
+          </h2>
+          <div class="skills-box">
+            <h3 class="skills-title">
+              Kompleksowe rozwiązania dla reklamy zewnętrznej i elewacji
+              wentylowanych
+            </h3>
+            <ul class="skills-list soft-skills-list">
+              <li class="skills-item soft-skills-item">
+                <svg width="100" height="100">
+                  <use href="./img/svg/icons.svg#communication" />
+                </svg>
+                <h4 class="skill-name">Komunikacja z klientem</h4>
+              </li>
+              <li class="skills-item soft-skills-item">
+                <svg width="100" height="100">
+                  <use href="./img/svg/icons.svg#measure" />
+                </svg>
+                <h4 class="skill-name">Wykonywanie pomiarów</h4>
+              </li>
+              <li class="skills-item soft-skills-item">
+                <svg width="100" height="100">
+                  <use href="./img/svg/icons.svg#project" />
+                </svg>
+                <h4 class="skill-name">Rozwój projektu</h4>
+              </li>
+              <li class="skills-item soft-skills-item">
+                <svg width="100" height="100">
+                  <use href="./img/svg/icons.svg#calculation" />
+                </svg>
+                <h4 class="skill-name">Wycena</h4>
+              </li>
+              <li class="skills-item soft-skills-item">
+                <svg width="100" height="100">
+                  <use href="./img/svg/icons.svg#working-process" />
+                </svg>
+                <h4 class="skill-name">Kontrola procesu produkcyjnego</h4>
+              </li>
+              <li class="skills-item soft-skills-item">
+                <svg width="100" height="100">
+                  <use href="./img/svg/icons.svg#installation" />
+                </svg>
+                <h4 class="skill-name">Kontrola instalacji</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="hard-skills-section">
+        <div class="container skills-container">
+          <h2 class="question skills-question">
+            Jakie umiejętności techniczne opanowałem?
+          </h2>
+          <div class="skills-box hard-skills-box">
+            <h3 class="skills-title">
+              Projektowanie graficzne, 3D-wizualizacja
+            </h3>
+            <ul class="skills-list hard-skills-list">
+              <li class="skills-item hard-skills-item">
+                <h4 class="skill-name hard-skill-name">
+                  Elewacje galerii handlowych, sklepów, biur
+                </h4>
+                <div class="skill-image proportion-type147">
+                  <img src="./img/hard-skills/fasades1.png" alt="" />
+                </div>
+              </li>
+              <li class="skills-item hard-skills-item">
+                <h4 class="skill-name hard-skill-name">
+                  Reklama wyposażenia wnętrz
+                </h4>
+                <div class="skill-image proportion-type147"></div>
+              </li>
+              <li class="skills-item hard-skills-item">
+                <h4 class="skill-name hard-skill-name">
+                  Reklama zewnętrzna (litery, kasetony, szyldy)
+                </h4>
+                <div class="skill-image proportion-type147"></div>
+              </li>
+              <li class="skills-item hard-skills-item">
+                <h4 class="skill-name hard-skill-name">
+                  Konstrukcje montażowe
+                </h4>
+                <div class="skill-image proportion-type147"></div>
+              </li>
+              <li class="skills-item hard-skills-item">
+                <h4 class="skill-name hard-skill-name">Grafika na pojazdach</h4>
+                <div class="skill-image proportion-type147"></div>
+              </li>
+              <li class="skills-item hard-skills-item">
+                <h4 class="skill-name hard-skill-name">
+                  Druk (wizytówki, ulotki ...)
+                </h4>
+                <div class="skill-image proportion-type147"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>

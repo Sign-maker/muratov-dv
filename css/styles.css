@@ -1,7 +1,10 @@
 :root {
   /* colors */
   --accent-color-061835: #061835;
-  --primary-color-blue-font-0a224a: #0a224a;
+  --primary-color-blue-font-0a224a: #000000;
+  --background-color-1: #e0e4e8;
+  --background-color-2: #f2f2f2;
+  --my-color-1: #5959a9;
 
   /* transition params */
   --my-transition-duration: 250ms;
@@ -61,6 +64,8 @@ body {
   color: var(--primary-color-blue-font-0a224a);
 }
 
+/* ====================COMMON STYLES========================== */
+
 .container {
   margin: 0 auto;
   max-width: 375px;
@@ -77,8 +82,129 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1440px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.question {
+  color: var(--my-color-1, #5959a9);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.208;
+}
+
+/* ====================HERO========================== */
+
+.hero-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: var(--background-color-1);
+}
+
+.hero-container {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-container img {
+  min-width: 144px;
+}
+.hero-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.23;
+  text-transform: uppercase;
+}
+
+.hero-list {
+}
+.hero-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.hero-text {
+  line-height: 1.25;
+}
+
+/* ====================SOFT-SKILLS========================== */
+.soft-skills-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: var(--background-color-2);
+}
+.skills-container {
+}
+
+.skills-question {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.skills-box {
+}
+.skills-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.skills-item {
+}
+
+.soft-skills-item {
+  display: flex;
+  align-items: center;
+  min-height: 140px;
+  padding: 20px 10px;
+  width: 345px;
+}
+.skills-item svg {
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--my-color-1);
+}
+.skill-name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* ====================HARD-SKILLS========================== */
+.hard-skills-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--background-color-1);
+}
+.hard-skills-box:not(:last-child) {
+  margin-bottom: 96px;
+}
+.hard-skills-item {
+}
+.hard-skill-name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skill-image {
+  position: relative;
+  overflow: hidden;
+}
+.proportion-type147 {
+  padding-bottom: 147%;
+}
+
+.skill-image img {
+  position: absolute;
+  object-fit: cover;
+  /* width: 100%; */
+  height: 100%;
 }

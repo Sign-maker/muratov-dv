@@ -1,52 +1,77 @@
 @media screen and (max-width: 374px) {
   /* ====================HERO========================== */
-  .hero-container {
-    display: block;
-  }
-  .hero-container img {
-    margin-bottom: 30px;
-  }
-  .hero-title {
-    margin-bottom: 0px;
+  .futures-list {
+    flex-direction: column;
+    gap: 24px;
   }
   /* ====================SOFT-SKILLS========================== */
   .skills-title {
     font-size: 24px;
   }
-  .skill-name {
-    font-size: 18px;
-  }
   .soft-skills-item {
     width: auto;
   }
+  .soft-skill-name {
+    font-size: 18px;
+  }
 }
 
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 767px) {
   /* ====================HERO========================== */
 
+  .hero-title-wrapper {
+    margin-left: 5%;
+  }
+  .hero-profession {
+    text-align: center;
+  }
+  .hero-ocupation {
+    text-align: center;
+  }
+
+  .futures-list {
+    display: flex;
+    gap: 18px;
+  }
+  .futures-item {
+    width: 100px;
+  }
+
+  .hero-wishes {
+    text-align: center;
+  }
+  /* ====================SOFT-SKILLS========================== */
+  .soft-skills-item {
+    margin: 0 auto;
+  }
   /* ====================HARD-SKILLS========================== */
   .hard-skills-item:not(:last-child) {
     margin-bottom: 50px;
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 757px) {
-  /* ====================HERO========================== */
-
-  .hero-title {
-    margin-bottom: 40px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   /* ====================HERO========================== */
+  .hero-section {
+    padding-top: 452px;
+    background-image: url(../img/hero/bg-tablet@1x.jpg),
+      linear-gradient(var(--background-color-1), var(--background-color-1));
+  }
 
-  .hero-title-wrapper {
-    gap: 28px;
+  .hero-info-wrapper {
+    max-width: 550px;
+    margin-left: 55px;
+  }
+  .hero-profession {
+    max-width: 467px;
   }
   .hero-title {
     font-size: 48px;
-    max-width: 259px;
+    max-width: 362px;
+  }
+  .hero-futures-wrapper {
+    align-items: center;
+    flex-direction: row;
   }
 
   /* ====================SOFT-SKILLS========================== */
@@ -70,35 +95,34 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 1199px) {
-  /* ====================HERO========================== */
-  .hero-list {
-    margin-left: -164px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   /* ====================HERO========================== */
 
   .hero-section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    background-image: none;
+    background-color: var(--background-color-1);
   }
+
   .hero-container {
-    max-width: 1050px;
-
-    gap: 40px;
+    background-image: url(../img/hero/bg-desktop@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
   }
-
-  .hero-container img {
-    min-width: 328px;
+  .hero-info-wrapper {
+    margin-left: 45px;
   }
   .hero-title-wrapper {
-    gap: 33px;
-  }
-
-  .hero-item:not(:last-child) {
-    margin-bottom: 33px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   /* ====================HARD-SKILLS========================== */
 

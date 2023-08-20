@@ -1,0 +1,51 @@
+<picture>
+  <source
+    srcset="
+      ./img/hero/my-photo-mobile@1x.jpg 1x,
+      ./img/hero/my-photo-mobile@2x.jpg 2x
+    "
+    type="image/jpeg"
+    media="(max-width:767px)"
+  />
+  <source
+    srcset="
+      ./img/hero/my-photo-mobile@1x.webp 1x,
+      ./img/hero/my-photo-mobile@2x.webp 2x
+    "
+    type="image/webp"
+    media="(max-width:767px)"
+  />
+  <source
+    srcset="
+      ./img/hero/my-photo-tablet@1x.jpg 1x,
+      ./img/hero/my-photo-tablet@2x.jpg 2x
+    "
+    type="image/jpeg"
+    media="(max-width:1199px)"
+  />
+  <source
+    srcset="
+      ./img/hero/my-photo-tablet@1x.webp 1x,
+      ./img/hero/my-photo-tablet@2x.webp 2x
+    "
+    type="image/webp"
+    media="(max-width:1199px)"
+  />
+  <source
+    srcset="
+      ./img/hero/my-photo-desktop@1x.jpg 1x,
+      ./img/hero/my-photo-desktop@2x.jpg 2x
+    "
+    type="image/jpeg"
+    media="(min-width:1200px)"
+  />
+  <source
+    srcset="
+      ./img/hero/my-photo-desktop@1x.webp 1x,
+      ./img/hero/my-photo-desktop@2x.webp 2x
+    "
+    type="image/webp"
+    media="(min-width:1200px)"
+  />
+  <img src="./img/hero/my-photo-desktop@1x.jpg" alt="my-photo" />
+</picture>

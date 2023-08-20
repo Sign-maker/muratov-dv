@@ -106,15 +106,23 @@ body {
 /* ====================HERO========================== */
 
 .hero-section {
-  padding-top: 312px;
   padding-bottom: 64px;
-  background-image: url(../img/hero/bg-mobile@1x.jpg),
-    linear-gradient(var(--background-color-1), var(--background-color-1));
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-color: var(--background-color-1);
 }
 
 .hero-container {
+  padding-top: 312px;
+  background-image: url(../img/hero/bg-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 428px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-container {
+    background-image: url(../img/hero/bg-mobile@2x.jpg);
+  }
 }
 
 .hero-title-wrapper {

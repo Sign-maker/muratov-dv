@@ -252,17 +252,22 @@ body {
   margin-bottom: 96px;
 }
 .hard-skills-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .hard-skill-name {
-  text-align: center;
-  margin-bottom: 20px;
+  /* text-align: center; */
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 .skill-image {
   position: relative;
   /* overflow: hidden; */
 }
 .proportion-type1 {
-  padding-bottom: 75%;
+  padding-bottom: 56.25%;
 }
 
 .skill-image img {

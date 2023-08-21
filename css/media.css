@@ -14,6 +14,9 @@
   .soft-skill-name {
     font-size: 18px;
   }
+  .hard-skill-name {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -101,7 +104,8 @@
   }
   /* ====================HARD-SKILLS========================== */
   .hard-skills-list {
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 50px;
   }
   .hard-skills-item {
     flex-basis: calc((100% - 24px) / 2);

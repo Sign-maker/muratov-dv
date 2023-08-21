@@ -112,7 +112,7 @@ body {
 
 .hero-container {
   padding-top: 312px;
-  background-image: url(../img/hero/bg-mobile@1x.jpg);
+  background-image: url(../images/hero/bg-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 428px;
@@ -121,7 +121,7 @@ body {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-container {
-    background-image: url(../img/hero/bg-mobile@2x.jpg);
+    background-image: url(../images/hero/bg-mobile@2x.jpg);
   }
 }
 
@@ -252,19 +252,17 @@ body {
   margin-bottom: 96px;
 }
 .hard-skills-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .hard-skill-name {
   /* text-align: center; */
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 10px;
+  /* text-transform: uppercase; */
 }
 .skill-image {
   position: relative;
   /* overflow: hidden; */
+  margin-bottom: 10px;
 }
 .proportion-type1 {
   padding-bottom: 56.25%;
@@ -278,6 +276,6 @@ body {
   transition: filter var(--my-transition-duration)
     var(--my-transition-timing-function);
 }
-.skill-image-link:hover img {
+.skill-image-link:is(:hover, :focus) img {
   filter: brightness(0.8);
 }

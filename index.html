@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/lightbox.min.css" />
   </head>
   <body>
     <header>
@@ -77,7 +78,7 @@
             <ul class="skills-list soft-skills-list">
               <li class="skills-item soft-skills-item">
                 <svg width="100" height="100">
-                  <use href="./img/svg/icons.svg#communication" />
+                  <use href="./images/svg/icons.svg#communication" />
                 </svg>
                 <h4 class="skill-name soft-skill-name">
                   Komunikacja z klientem
@@ -85,25 +86,25 @@
               </li>
               <li class="skills-item soft-skills-item">
                 <svg width="100" height="100">
-                  <use href="./img/svg/icons.svg#measure" />
+                  <use href="./images/svg/icons.svg#measure" />
                 </svg>
                 <h4 class="skill-name soft-skill-name">Wykonywanie pomiarów</h4>
               </li>
               <li class="skills-item soft-skills-item">
                 <svg width="100" height="100">
-                  <use href="./img/svg/icons.svg#project" />
+                  <use href="./images/svg/icons.svg#project" />
                 </svg>
                 <h4 class="skill-name soft-skill-name">Rozwój projektu</h4>
               </li>
               <li class="skills-item soft-skills-item">
                 <svg width="100" height="100">
-                  <use href="./img/svg/icons.svg#calculation" />
+                  <use href="./images/svg/icons.svg#calculation" />
                 </svg>
                 <h4 class="skill-name soft-skill-name">Wycena</h4>
               </li>
               <li class="skills-item soft-skills-item">
                 <svg width="100" height="100">
-                  <use href="./img/svg/icons.svg#working-process" />
+                  <use href="./images/svg/icons.svg#working-process" />
                 </svg>
                 <h4 class="skill-name soft-skill-name">
                   Kontrola procesu produkcyjnego
@@ -111,7 +112,7 @@
               </li>
               <li class="skills-item soft-skills-item">
                 <svg width="100" height="100">
-                  <use href="./img/svg/icons.svg#installation" />
+                  <use href="./images/svg/icons.svg#installation" />
                 </svg>
                 <h4 class="skill-name soft-skill-name">Kontrola instalacji</h4>
               </li>
@@ -135,27 +136,35 @@
                   Elewacje galerii handlowych, sklepów, biur
                 </h4>
                 <div class="skill-image proportion-type1">
-                  <picture>
-                    <source
-                      srcset="
-                        ./img/hard-skills/fasades@1x.jpg 1x,
-                        ./img/hard-skills/fasades@2x.jpg 2x
-                      "
-                      type="image/jpeg"
-                    />
-                    <source
-                      srcset="
-                        ./img/hard-skills/fasades@1x.webp 1x,
-                        ./img/hard-skills/fasades@2x.webp 2x
-                      "
-                      type="image/webp"
-                    />
+                  <a
+                    class="skill-image-link"
+                    href="./images/hard-skills/originals/fasades.png"
+                    data-lightbox="example-set3"
+                    data-title="Elewacje galerii handlowych, sklepów, biur"
+                    data-alt="Elewacje galerii handlowych"
+                  >
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
 
-                    <img
-                      src="./img/hard-skills/fasades@1x.jpg"
-                      alt="my-photo"
-                    />
-                  </picture>
+                      <img
+                        src="./images/hard-skills/fasades@1x.jpg"
+                        alt="my-photo"
+                      />
+                    </picture>
+                  </a>
                 </div>
               </li>
               <li class="skills-item hard-skills-item">
@@ -163,7 +172,7 @@
                   Reklama wyposażenia wnętrz
                 </h4>
                 <div class="skill-image proportion-type1">
-                  <img src="./img/hard-skills/interior.png" alt="" />
+                  <img src="./images/hard-skills/interior.png" alt="" />
                 </div>
               </li>
               <li class="skills-item hard-skills-item">
@@ -171,7 +180,7 @@
                   Reklama zewnętrzna (litery, kasetony, szyldy)
                 </h4>
                 <div class="skill-image proportion-type1">
-                  <img src="./img/hard-skills/outdoor-sign.png" alt="" />
+                  <img src="./images/hard-skills/outdoor-sign.png" alt="" />
                 </div>
               </li>
               <li class="skills-item hard-skills-item">
@@ -179,13 +188,13 @@
                   Konstrukcje montażowe
                 </h4>
                 <div class="skill-image proportion-type1">
-                  <img src="./img/hard-skills/metall.png" alt="" />
+                  <img src="./images/hard-skills/metall.png" alt="" />
                 </div>
               </li>
               <li class="skills-item hard-skills-item">
                 <h4 class="skill-name hard-skill-name">Grafika na pojazdach</h4>
                 <div class="skill-image proportion-type1">
-                  <img src="./img/hard-skills/car-wrapping.png" alt="" />
+                  <img src="./images/hard-skills/car-wrapping.png" alt="" />
                 </div>
               </li>
               <li class="skills-item hard-skills-item">
@@ -193,7 +202,7 @@
                   Dokumentacja techniczna
                 </h4>
                 <div class="skill-image proportion-type1">
-                  <img src="./img/hard-skills/documentation.png" alt="" />
+                  <img src="./images/hard-skills/documentation.png" alt="" />
                 </div>
               </li>
             </ul>
@@ -202,5 +211,14 @@
       </section>
     </main>
     <footer></footer>
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script>
+      lightbox.option({
+        resizeDuration: 300,
+        fadeDuration: 200,
+        imageFadeDuration: 200,
+        wrapAround: true,
+      });
+    </script>
   </body>
 </html>

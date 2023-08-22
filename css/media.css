@@ -8,11 +8,8 @@
   .skills-title {
     font-size: 24px;
   }
-  .soft-skills-item {
-    width: auto;
-  }
   .soft-skill-name {
-    font-size: 18px;
+    font-size: 16px;
   }
   .hard-skill-name {
     font-size: 18px;
@@ -83,7 +80,6 @@
   }
   .hero-title {
     font-size: 48px;
-    max-width: 362px;
   }
   .hero-futures-wrapper {
     align-items: center;
@@ -97,6 +93,9 @@
   }
   .soft-skills-list {
     justify-content: center;
+  }
+  .soft-skills-item {
+    flex-basis: 345px;
   }
 
   .skills-title {
@@ -151,9 +150,26 @@
     justify-content: space-between;
     align-items: flex-end;
   }
+  .hero-title {
+    flex: 0;
+  }
   /* ====================HARD-SKILLS========================== */
 
   .hard-skills-item {
     flex-basis: calc((100% - 48px) / 3);
+  }
+
+  .equipment-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .electro-list,
+  .color-correction-list {
+    max-width: 774px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .electro-item,
+  .color-corection-item {
+    flex-basis: calc((100% - 24px) / 2);
   }
 }

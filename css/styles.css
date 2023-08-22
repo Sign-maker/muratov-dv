@@ -130,6 +130,7 @@ body {
   flex-direction: column;
   gap: 44px;
   margin-bottom: 50px;
+  align-items: flex-start;
 }
 
 .hero-title {
@@ -138,7 +139,6 @@ body {
   line-height: 1.23;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  max-width: 256px;
   padding: 20px 40px;
   color: var(--my-color-2);
   background-color: var(--my-color-1);
@@ -228,7 +228,6 @@ body {
   align-items: center;
   min-height: 140px;
   padding: 20px 10px;
-  width: 345px;
 }
 .skills-item svg {
   min-width: 100px;

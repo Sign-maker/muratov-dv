@@ -168,7 +168,7 @@
     z-index: 9001;
     height: 100vh;
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
     background-color: var(--background-color-1);
     padding: 100px 15px;
     transition: all var(--my-transition-duration)

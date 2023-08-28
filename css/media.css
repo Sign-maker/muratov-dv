@@ -1,12 +1,9 @@
 @media screen and (max-width: 374px) {
   /* ====================HERO========================== */
-  .futures-list {
-    flex-direction: column;
-    gap: 24px;
-  }
+
   /* ====================SOFT-SKILLS========================== */
   .skills-title {
-    font-size: 24px;
+    font-size: 30px;
   }
   .soft-skill-name {
     font-size: 16px;
@@ -15,31 +12,17 @@
     font-size: 18px;
   }
 }
+@media screen and (max-width: 400px) {
+  .futures-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
 
 @media screen and (max-width: 767px) {
   /* ====================HERO========================== */
 
-  .hero-title-wrapper {
-    margin-left: 5%;
-  }
-  .hero-profession {
-    text-align: center;
-  }
-  .hero-ocupation {
-    text-align: center;
-  }
-
-  .futures-list {
-    display: flex;
-    gap: 18px;
-  }
-  .futures-item {
-    width: 100px;
-  }
-
-  .hero-wishes {
-    text-align: center;
-  }
   /* ====================SOFT-SKILLS========================== */
   .soft-skills-item {
     margin: 0 auto;
@@ -53,37 +36,55 @@
 @media screen and (min-width: 768px) {
   /* ====================HERO========================== */
   .hero-section {
-    padding-top: 0px;
-
-    background-image: none;
-    background-color: var(--background-color-1);
+    padding-top: 64px;
+    background-image: url(../images/hero/hero-bg-tablet@1x.jpg),
+      linear-gradient(var(--background-color-1), var(--background-color-1));
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 768px, auto;
   }
   .hero-container {
-    padding-top: 452px;
-    background-image: url(../images/hero/bg-tablet@1x.jpg);
-    background-size: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .hero-container {
-      background-image: url(../images/hero/bg-tablet@2x.jpg);
+    .hero-section {
+      background-image: url(../images/hero/hero-bg-tablet@2x.jpg),
+        linear-gradient(var(--background-color-1), var(--background-color-1));
     }
   }
-
-  .hero-info-wrapper {
-    max-width: 550px;
-    margin-left: 55px;
-  }
-  .hero-profession {
-    max-width: 467px;
-  }
   .hero-title {
-    font-size: 48px;
+    font-size: 45px;
+    color: var(--background-color-1);
+    margin-bottom: 40px;
   }
-  .hero-futures-wrapper {
-    align-items: center;
-    flex-direction: row;
+
+  .hero-question {
+    margin-bottom: 170px;
+    color: var(--background-color-1);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-profession {
+    max-width: 408px;
+    color: var(--background-color-1);
+    margin-bottom: 100px;
+  }
+
+  .futures-item {
+    max-width: 165px;
+  }
+  .futures-number {
+    font-size: 56px;
+  }
+
+  .futures-descr {
+    font-size: 16px;
+  }
+  .hero-wishes {
+    font-size: 18px;
   }
 
   /* ====================SOFT-SKILLS========================== */
@@ -99,7 +100,8 @@
   }
 
   .skills-title {
-    font-size: 36px;
+    font-size: 40px;
+    text-align: center;
   }
   /* ====================HARD-SKILLS========================== */
   .hard-skills-list {
@@ -111,48 +113,85 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero-ocupation {
+    text-align: center;
+  }
+  .hero-wishes {
+    text-align: center;
+  }
+  .futures-list {
+    justify-content: space-evenly;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   /* ====================HERO========================== */
 
   .hero-section {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    background-image: url(../images/hero/hero-bg-desktop@1x.jpg),
+      linear-gradient(var(--background-color-1), var(--background-color-1));
 
-    background-image: none;
-    background-color: var(--background-color-1);
+    background-size: 1200px, auto;
   }
 
   .hero-container {
-    background-image: url(../images/hero/bg-desktop@1x.jpg);
-    background-position: right;
-    background-size: 534px;
-    min-height: 540px;
-    display: flex;
-    align-items: center;
-    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .hero-container {
-      background-image: url(../images/hero/bg-desktop@2x.jpg);
+    .hero-section {
+      background-image: url(../images/hero/hero-bg-desktop@2x.jpg),
+        linear-gradient(var(--background-color-1), var(--background-color-1));
     }
   }
 
-  .hero-info-wrapper {
-    margin-left: 0px;
-  }
-  .hero-title-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
   .hero-title {
-    flex: 0;
+    font-size: 60px;
   }
+
+  .hero-question {
+    margin-bottom: 100px;
+  }
+
+  .hero-profession {
+    font-size: 38px;
+    max-width: 468px;
+    margin-bottom: 46px;
+  }
+  .hero-ocupation {
+    color: var(--background-color-1);
+    margin-bottom: 20px;
+    max-width: 370px;
+  }
+  .futures-list {
+    margin-bottom: 20px;
+    max-width: 588px;
+  }
+  .futures-number {
+    color: var(--background-color-1);
+  }
+
+  .futures-descr {
+    color: var(--background-color-1);
+  }
+  .hero-wishes {
+    font-size: 16px;
+    color: var(--background-color-1);
+  }
+
+  /* ====================SOFT-SKILLS========================== */
+
+  .skills-title {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+
   /* ====================HARD-SKILLS========================== */
 
   .hard-skills-item {

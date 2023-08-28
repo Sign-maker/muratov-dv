@@ -21,19 +21,38 @@
 }
 
 @media screen and (max-width: 767px) {
+  /* ====================HEADER========================== */
+
   /* ====================HERO========================== */
 
   /* ====================SOFT-SKILLS========================== */
   .soft-skills-item {
-    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+
   /* ====================HARD-SKILLS========================== */
+  .skills-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .skills-question,
+  .skills-title,
+  .hard-skill-name {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .hard-skills-item:not(:last-child) {
     margin-bottom: 50px;
   }
 }
 
 @media screen and (min-width: 768px) {
+  /* ====================HEADER========================== */
+  .header-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   /* ====================HERO========================== */
   .hero-section {
     padding-top: 64px;
@@ -88,6 +107,9 @@
   }
 
   /* ====================SOFT-SKILLS========================== */
+  .skills-question {
+    text-align: center;
+  }
   .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -125,7 +147,99 @@
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .header-nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 9001;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--background-color-1);
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all var(--my-transition-duration)
+      var(--my-transition-timing-function);
+    /* visibility: hidden; */
+  }
+  .header-nav-wrapper.active {
+    left: 0;
+    /* visibility: visible; */
+  }
+  .header-logo-link {
+    z-index: 9002;
+  }
+  .header-nav-list {
+  }
+  .header-nav-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .header-addres-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .menu-burger-btn {
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    padding: 6px 0;
+    z-index: 9002;
+  }
+
+  .burger-bar {
+    transition: transform var(--my-transition-duration)
+      var(--my-transition-timing-function);
+  }
+
+  .active-icon .burger-bar:nth-child(2) {
+    transform: translate3d(0, 4px, 0) rotate(45deg);
+  }
+
+  .active-icon .burger-bar:nth-child(3) {
+    transform: translate3d(0, -4px, 0) rotate(-45deg);
+  }
+
+  .active-icon .burger-bar:nth-child(1),
+  .active-icon .burger-bar:nth-child(4) {
+    opacity: 0;
+  }
+
+  .burger-bar {
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+  }
+  .burger-bar:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  /* ====================HEADER========================== */
+  .header-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .header-nav-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 60px;
+  }
+  .header-nav-list {
+    display: flex;
+    gap: 20px;
+  }
+  .header-addres-list {
+    display: flex;
+    gap: 20px;
+  }
+  .menu-burger-btn {
+    display: none;
+  }
   /* ====================HERO========================== */
 
   .hero-section {

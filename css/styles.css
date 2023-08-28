@@ -33,6 +33,7 @@ ul {
 a {
   color: currentColor;
   text-decoration: none;
+  font-style: normal;
 }
 
 button {
@@ -101,6 +102,85 @@ body {
   font-style: italic;
   font-weight: 500;
   line-height: 1.208;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+/* ====================HEADER========================== */
+.header {
+  background: linear-gradient(180deg, #f2f2f2 0%, rgba(242, 242, 242, 0) 100%);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: auto;
+  z-index: 9000;
+}
+.container {
+}
+.header-container {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo-link {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 2;
+  padding: 17px 0;
+}
+.header-nav-wrapper {
+}
+
+.nav-list {
+}
+.header-nav-list {
+}
+.nav-item {
+}
+.header-nav-item {
+}
+.nav-link {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: color var(--my-transition-duration)
+    var(--my-transition-timing-function);
+}
+.header-nav-link {
+}
+.addres {
+}
+.header-addres {
+}
+.addres-list {
+}
+.header-addres-list {
+}
+.addres-item {
+}
+.header-addres-item {
+}
+.address-link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: color var(--my-transition-duration)
+    var(--my-transition-timing-function);
+}
+.nav-link:is(:hover, :focus),
+.address-link:is(:hover, :focus) {
+  color: var(--my-color-1);
+}
+.header-addres-link {
 }
 
 /* ====================HERO========================== */
@@ -197,15 +277,14 @@ body {
 }
 
 .skills-question {
-  text-align: center;
   margin-bottom: 64px;
 }
 .skills-box {
 }
 .skills-title {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.23;
 
   margin-bottom: 32px;
 }

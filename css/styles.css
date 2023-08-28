@@ -1,11 +1,14 @@
 :root {
   /* colors */
   --accent-color-061835: #061835;
-  --primary-color: #000000;
+  --primary-color: #19191b;
   --background-color-1: #e0e4e8;
   --background-color-2: #f2f2f2;
+  --background-color-3: #62758a;
   --my-color-1: #1c3c8d;
   --my-color-2: white;
+  --hero-photo-color-1: #7c604f;
+  --hero-photo-color-2: #8594a5;
 
   /* transition params */
   --my-transition-duration: 250ms;
@@ -125,13 +128,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
 }
 .header-logo-link {
   color: var(--primary-color);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 2;
-  padding: 17px 0;
+  padding: 16px 0;
 }
 .header-nav-wrapper {
 }
@@ -145,12 +149,10 @@ body {
 .header-nav-item {
 }
 .nav-link {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  transition: color var(--my-transition-duration)
+  transition: opacity var(--my-transition-duration)
     var(--my-transition-timing-function);
 }
 .header-nav-link {
@@ -168,17 +170,15 @@ body {
 .header-addres-item {
 }
 .address-link {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.4;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  transition: color var(--my-transition-duration)
+  transition: opacity var(--my-transition-duration)
     var(--my-transition-timing-function);
 }
 .nav-link:is(:hover, :focus),
 .address-link:is(:hover, :focus) {
-  color: var(--my-color-1);
+  opacity: 0.6;
 }
 .header-addres-link {
 }
@@ -188,11 +188,15 @@ body {
 .hero-section {
   padding-top: 216px;
   padding-bottom: 64px;
+  /* background-image: url(../images/hero/hero-bg-mobile@1x.jpg),
+    linear-gradient(var(--background-color-1), var(--background-color-1)); */
+
   background-image: url(../images/hero/hero-bg-mobile@1x.jpg),
+    linear-gradient(45deg, var(--hero-photo-color-1), var(--hero-photo-color-2)),
     linear-gradient(var(--background-color-1), var(--background-color-1));
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 428px, auto;
+  background-size: 428px 320px, 428px 320px, auto;
 }
 
 .hero-container {
@@ -204,6 +208,11 @@ body {
   (min-resolution: 2dppx) {
   .hero-section {
     background-image: url(../images/hero/hero-bg-mobile@2x.jpg),
+      linear-gradient(
+        45deg,
+        var(--hero-photo-color-1),
+        var(--hero-photo-color-2)
+      ),
       linear-gradient(var(--background-color-1), var(--background-color-1));
   }
 }
@@ -214,7 +223,7 @@ body {
   line-height: 1.23;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
   color: var(--background-color-1);
   margin-bottom: 80px;
 }

@@ -62,7 +62,7 @@
         var(--hero-photo-color-1),
         var(--hero-photo-color-2)
       ),
-      linear-gradient(var(--background-color-1), var(--background-color-1));
+      linear-gradient(var(--background-color-2), var(--background-color-2));
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 768px 574px, 768px 574px, auto;
@@ -81,7 +81,7 @@
           var(--hero-photo-color-1),
           var(--hero-photo-color-2)
         ),
-        linear-gradient(var(--background-color-1), var(--background-color-1));
+        linear-gradient(var(--background-color-2), var(--background-color-2));
     }
   }
   .hero-title {
@@ -164,21 +164,24 @@
   .header-nav-wrapper {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     z-index: 9001;
     height: 100vh;
     width: 100%;
     overflow-y: auto;
-    background-color: var(--background-color-1);
+    /* background-color: var(--background-color-1); */
+    background-image: linear-gradient(
+      90deg,
+      rgba(224, 228, 232, 0.5) 0%,
+      rgba(224, 228, 232, 1) 75%
+    );
+    backdrop-filter: blur(10px);
     padding: 100px 15px;
-    transform: translateX(100%);
     transition: transform var(--my-transition-duration)
       var(--my-transition-timing-function);
-    /* visibility: hidden; */
   }
   .header-nav-wrapper.active {
-    transform: translateX(0);
-    /* visibility: visible; */
+    transform: translateX(-100%);
   }
   .header-logo-link {
     z-index: 9002;
@@ -210,8 +213,15 @@
   }
 
   .burger-bar {
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    opacity: 0.7;
     transition: transform var(--my-transition-duration)
       var(--my-transition-timing-function);
+  }
+  .burger-bar:not(:last-child) {
+    margin-bottom: 4px;
   }
 
   .active-icon .burger-bar:nth-child(2) {
@@ -225,16 +235,6 @@
   .active-icon .burger-bar:nth-child(1),
   .active-icon .burger-bar:nth-child(4) {
     opacity: 0;
-  }
-
-  .burger-bar {
-    height: 4px;
-    background-color: var(--primary-color);
-    border-radius: 2px;
-    opacity: 0.6;
-  }
-  .burger-bar:not(:last-child) {
-    margin-bottom: 4px;
   }
 }
 
@@ -290,7 +290,7 @@
         var(--hero-photo-color-1),
         var(--hero-photo-color-2)
       ),
-      linear-gradient(var(--background-color-1), var(--background-color-1));
+      linear-gradient(var(--background-color-2), var(--background-color-2));
 
     background-size: 1200px 897px, 1200px 897px, auto;
   }
@@ -310,7 +310,7 @@
           var(--hero-photo-color-1),
           var(--hero-photo-color-2)
         ),
-        linear-gradient(var(--background-color-1), var(--background-color-1));
+        linear-gradient(var(--background-color-2), var(--background-color-2));
     }
   }
 

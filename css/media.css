@@ -45,6 +45,20 @@
   .hard-skills-item:not(:last-child) {
     margin-bottom: 50px;
   }
+
+  /* ====================FOOTER========================== */
+
+  .footer-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .footer-nav-list {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -144,6 +158,17 @@
   .hard-skills-item {
     flex-basis: calc((100% - 24px) / 2);
   }
+
+  /* ====================FOOTER========================== */
+
+  .footer-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .footer {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -155,6 +180,12 @@
   }
   .futures-list {
     justify-content: space-evenly;
+  }
+
+  /* ====================FOOTER========================== */
+  .footer-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -185,6 +216,7 @@
   }
   .header-logo-link {
     z-index: 9002;
+    padding: 16px 0;
   }
   .header-nav-list {
     margin-bottom: 64px;
@@ -192,11 +224,11 @@
   .header-nav-item:not(:last-child) {
     margin-bottom: 20px;
   }
-  .nav-link {
+  .header-nav-link {
     display: block;
     text-align: center;
   }
-  .address-link {
+  .header-addres-link {
     display: block;
     text-align: center;
   }
@@ -236,6 +268,18 @@
   .active-icon .burger-bar:nth-child(4) {
     opacity: 0;
   }
+
+  /* ====================FOOTER========================== */
+  .footer-logo-link {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .footer-nav-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .footer-addres-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -258,7 +302,7 @@
 
   .header-nav-list {
     display: flex;
-    gap: 20px;
+    gap: 30px;
   }
 
   .nav-link {
@@ -376,5 +420,28 @@
   .electro-item,
   .color-corection-item {
     flex-basis: calc((100% - 24px) / 2);
+  }
+
+  /* ====================FOOTER========================== */
+  .footer-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: baseline;
+    gap: 64px;
+  }
+  .footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .footer-nav-list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .footer-addres-list {
+    display: flex;
+    gap: 30px;
   }
 }

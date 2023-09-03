@@ -130,12 +130,11 @@ body {
   align-items: center;
   gap: 50px;
 }
-.header-logo-link {
+.logo-link {
   color: var(--primary-color);
   font-size: 20px;
   font-weight: 800;
   line-height: 2;
-  padding: 16px 0;
 }
 .header-nav-wrapper {
 }
@@ -355,4 +354,45 @@ body {
 .skill-image-link:is(:hover, :focus) img {
   filter: brightness(0.8);
   transform: scale(1.02);
+}
+
+/* ====================FOOTER========================== */
+.footer {
+  background-color: var(--background-color-1);
+}
+.footer-logo-link {
+}
+.footer-nav-wrapper {
+}
+.nav {
+}
+.footer-nav {
+}
+.nav-list {
+}
+.footer-nav-list {
+}
+.nav-item {
+}
+.footer-nav-item {
+}
+.nav-link {
+}
+.footer-nav-link {
+}
+.addres {
+}
+.footer-addres {
+}
+.addres-list {
+}
+.footer-addres-list {
+}
+.addres-item {
+}
+.footer-addres-item {
+}
+.address-link {
+}
+.footer-addres-link {
 }

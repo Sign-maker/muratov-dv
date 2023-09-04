@@ -427,9 +427,9 @@
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-around;
     align-items: baseline;
-    gap: 64px;
+    /* gap: 64px; */
   }
   .footer {
     padding-top: 96px;

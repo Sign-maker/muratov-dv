@@ -319,7 +319,7 @@ body {
 /* ====================HARD-SKILLS========================== */
 .hard-skills-section {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 96px;
   background-color: var(--background-color-2);
 }
 .hard-skills-box:not(:last-child) {

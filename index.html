@@ -1380,26 +1380,28 @@
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
 
       const swiperBestProjects = new Swiper(".swiper-best-projects", {
-        resizeObserver: false,
+        resizeObserver: true,
         updateOnWindowResize: true,
 
         slidesPerView: 1.2,
         spaceBetween: 10,
         centeredSlides: false,
-        // roundLengths: true,
-        freeMode: {
-          enabled: true,
-          // sticky: true,
 
-          momentumRatio: 0.5,
-          momentumVelocityRatio: 1,
-        },
+        roundLengths: true,
+        rewind: true,
+        // freeMode: {
+        //   enabled: false,
+        //   // sticky: true,
+
+        //   momentumRatio: 0.5,
+        //   momentumVelocityRatio: 1,
+        // },
 
         // grabCursor: true,
 
-        // keyboard: {
-        //   enabled: true,
-        // },
+        keyboard: {
+          enabled: true,
+        },
 
         // autoplay: {
         //   delay: 2500,

@@ -20,6 +20,9 @@
   }
 }
 
+@media screen and (min-width: 428px) {
+}
+
 @media screen and (max-width: 767px) {
   /* ====================HEADER========================== */
 
@@ -31,11 +34,24 @@
     padding-right: 20px;
   }
 
+  /* ====================BEST-PROJECTS========================== */
+
+  .best-projects-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* ====================BEST-PROJECTS========================== */
+
+  .btn-more {
+    margin-left: 30px;
+  }
+
   /* ====================HARD-SKILLS========================== */
   .skills-container {
     padding-left: 0;
     padding-right: 0;
   }
+
   .skills-question,
   .skills-title,
   .hard-skill-name {
@@ -150,6 +166,16 @@
     font-size: 40px;
     text-align: center;
   }
+
+  /* ====================BEST-PROJECTS========================== */
+  .best-projects-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .btn-more {
+    margin: 0 auto;
+  }
+
   /* ====================HARD-SKILLS========================== */
   .hard-skills-list {
     column-gap: 24px;
@@ -245,6 +271,7 @@
   }
 
   .burger-bar {
+    display: block;
     height: 4px;
     background-color: var(--primary-color);
     border-radius: 2px;

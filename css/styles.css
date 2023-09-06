@@ -120,8 +120,7 @@ body {
   left: auto;
   z-index: 9000;
 }
-.container {
-}
+
 .header-container {
   padding-left: 30px;
   padding-right: 30px;
@@ -316,9 +315,70 @@ body {
   font-weight: 500;
   line-height: 1.2;
 }
+
+/* ====================BEST-PROJECTS========================== */
+.best-projects-section {
+  padding-top: 72px;
+  padding-bottom: 96px;
+}
+
+.best-projects-container {
+  max-width: 1920px;
+}
+
+.swiper {
+  height: 300px;
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .swiper {
+    height: 375px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper {
+    height: 450px;
+  }
+}
+
+.swiper-slide {
+  background-color: var(--background-color-1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-more {
+  color: var(--my-color-1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 185px;
+  height: 40px;
+
+  background-color: var(--background-color-2);
+  border: 2px solid var(--my-color-1);
+  border-radius: 20px;
+  transition: background-color var(--my-transition-duration)
+    var(--my-transition-timing-function);
+}
+.btn-more:is(:hover, :focus) {
+  background-color: var(--background-color-1);
+}
+
 /* ====================HARD-SKILLS========================== */
+
 .hard-skills-section {
-  padding-top: 50px;
+  padding-top: 64px;
   padding-bottom: 96px;
   background-color: var(--background-color-2);
 }

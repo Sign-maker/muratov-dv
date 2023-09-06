@@ -1380,7 +1380,7 @@
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
 
       const swiperBestProjects = new Swiper(".swiper-best-projects", {
-        resizeObserver: true,
+        resizeObserver: false,
         updateOnWindowResize: true,
 
         slidesPerView: 1.2,
@@ -1390,7 +1390,7 @@
         freeMode: {
           enabled: true,
           // sticky: true,
-          minimumVelocity: 0,
+
           momentumRatio: 0.5,
           momentumVelocityRatio: 1,
         },

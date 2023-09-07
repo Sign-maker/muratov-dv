@@ -111,6 +111,10 @@ body {
   overflow: hidden;
 }
 
+/* .pswp__img {
+  object-fit: contain;
+  object-position: center;
+} */
 /* ====================HEADER========================== */
 .header {
   background: linear-gradient(180deg, #f2f2f2 0%, rgba(242, 242, 242, 0) 100%);

@@ -18,13 +18,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/photoswipe.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -193,26 +193,26 @@
               <div class="swiper-slide">
                 <a
                   class="skill-image-link"
-                  href="./images/hard-skills/fasades-big.jpg"
+                  href="./images/best-projects/1.jpg"
                   data-pswp-width="1600"
                   data-pswp-height="900"
                   target="_blank"
                 >
                   <picture>
                     <!-- <source
-                      srcset="
-                        ./images/hard-skills/fasades@1x.webp 1x,
-                        ./images/hard-skills/fasades@2x.webp 2x
-                      "
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/hard-skills/fasades@1x.jpg 1x,
-                        ./images/hard-skills/fasades@2x.jpg 2x
-                      "
-                      type="image/jpeg"
-                    /> -->
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
 
                     <img
                       loading="lazy"
@@ -221,6 +221,7 @@
                     />
                   </picture>
                 </a>
+
                 <div
                   class="swiper-lazy-preloader swiper-lazy-preloader-white"
                 ></div>
@@ -1382,11 +1383,9 @@
       const swiperBestProjects = new Swiper(".swiper-best-projects", {
         resizeObserver: true,
         updateOnWindowResize: true,
-
         slidesPerView: 1.2,
         spaceBetween: 10,
         centeredSlides: false,
-
         roundLengths: true,
         rewind: true,
         // freeMode: {
@@ -1601,6 +1600,7 @@
         children: "a",
         pswpModule: () => import("./js/photoswipe.esm.js"),
       });
+
       lightboxColor.init();
     </script>
   </body>

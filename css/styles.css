@@ -319,8 +319,8 @@ body {
 /* ====================BEST-PROJECTS, PORTFOLIO========================== */
 .best-projects-section,
 .portfolio-section {
-  padding-top: 72px;
-  padding-bottom: 96px;
+  padding-top: 56px;
+  padding-bottom: 64px;
 }
 
 .best-projects-container,
@@ -438,7 +438,7 @@ body {
   height: 40px;
 
   background-color: var(--background-color-2);
-  border: 2px solid var(--my-color-1);
+  border: 1px solid var(--my-color-1);
   border-radius: 20px;
   transition: background-color var(--my-transition-duration)
     var(--my-transition-timing-function);

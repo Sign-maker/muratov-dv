@@ -385,7 +385,7 @@ body {
   --f-button-bg: transparent;
   /* --f-button-hover-bg: #f9f9f9; */
   /* --f-button-active-bg: #f0f0f0; */
-  /* --f-carousel-spacing: 12px; */
+  --f-carousel-spacing: 12px;
   --f-carousel-slide-width: calc((100%) / 1.2);
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
@@ -430,25 +430,25 @@ body {
 }
 
 .btn-more {
-  color: var(--my-color-1);
-  font-size: 16px;
-  font-weight: 600;
+  color: var(--background-color-2);
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.4;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 185px;
-  height: 40px;
+  max-width: 200px;
+  height: 44px;
 
-  background-color: var(--background-color-2);
-  border: 1px solid var(--my-color-1);
-  border-radius: 20px;
+  background-color: var(--my-color-1);
+  /* border: 1px solid var(--my-color-1); */
+  border-radius: 22px;
   transition: background-color var(--my-transition-duration)
     var(--my-transition-timing-function);
 }
 .btn-more:is(:hover, :focus) {
-  background-color: var(--background-color-1);
+  background-color: var(--accent-color-061835);
 }
 
 /* ====================HARD-SKILLS========================== */

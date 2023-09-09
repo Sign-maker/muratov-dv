@@ -385,9 +385,8 @@ body {
   --f-button-bg: transparent;
   /* --f-button-hover-bg: #f9f9f9; */
   /* --f-button-active-bg: #f0f0f0; */
-
-  --f-carousel-slide-width: calc(100% / 1.2);
   --f-carousel-spacing: 12px;
+  --f-carousel-slide-width: calc((100% - 24px) / 1.2);
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   #best-projects-carousel,

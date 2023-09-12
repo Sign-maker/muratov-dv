@@ -196,6 +196,8 @@
     padding-top: 64px;
     padding-bottom: 96px;
   }
+
+  /*=========== BEST-PROJECTS.HTML========== */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -223,7 +225,7 @@
     position: fixed;
     top: 0;
     left: 100%;
-    z-index: 9001;
+    z-index: 101;
     height: 100vh;
     width: 100%;
     overflow-y: auto;
@@ -242,7 +244,7 @@
     transform: translateX(-100%);
   }
   .header-logo-link {
-    z-index: 9002;
+    z-index: 102;
     padding: 16px 0;
   }
   .header-nav-list {
@@ -268,7 +270,7 @@
     width: 40px;
     height: 40px;
     padding: 6px 0;
-    z-index: 9002;
+    z-index: 102;
   }
 
   .burger-bar {
@@ -471,5 +473,11 @@
   .footer-addres-list {
     display: flex;
     gap: 30px;
+  }
+
+  /*=========== BEST-PROJECTS.HTML========== */
+
+  .first-best-project {
+    padding-top: 132px;
   }
 }

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Dmytro Muratov</title>
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a href="./index.html" class="logo-link header-logo-link"> DM </a>
+        <div class="header-nav-wrapper">
+          <nav class="nav header-nav">
+            <ul class="nav-list header-nav-list">
+              <li class="nav-item header-nav-item">
+                <a
+                  href="./index.html#soft-skills"
+                  class="nav-link header-nav-link menu-link"
+                  >Rozwiązania</a
+                >
+              </li>
+              <li class="nav-item header-nav-item">
+                <a
+                  href="./best-projects.html"
+                  class="nav-link header-nav-link menu-link active-page"
+                  >Najlepsze projekty</a
+                >
+              </li>
+              <li class="nav-item header-nav-item">
+                <a
+                  href="./index.html#hard-skills"
+                  class="nav-link header-nav-link menu-link"
+                  >Umiejętności</a
+                >
+              </li>
+              <li class="nav-item header-nav-item">
+                <a
+                  href="./portfolio.html"
+                  class="nav-link header-nav-link menu-link"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <address class="addres header-addres">
+            <ul class="addres-list header-addres-list">
+              <li class="addres-item header-addres-item">
+                <a
+                  href="mailto:muratovdv76@gmail.com"
+                  class="address-link header-addres-link menu-link"
+                  >muratovdv76@gmail.com</a
+                >
+              </li>
+              <li class="addres-item header-addres-item">
+                <a
+                  href="tel:+48572112582"
+                  class="address-link header-addres-link menu-link"
+                  >+48 572 112 582</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <button class="menu-burger-btn" aria-label="mobile-menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="best-projects-section first-best-project">
+        <div
+          class="container best-projects-container best-project-page-container"
+        >
+          <h2 class="question skills-question">
+            Najlepsze zrealizowane projekty
+          </h2>
+          <h3 class="skills-title best-project-title">Project name</h3>
+
+          <div id="best-project-1-gallery">
+            <div class="f-carousel" id="best-projects-carousel-with-thumbs">
+              <div
+                class="f-carousel__slide"
+                data-thumb-src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg"
+              >
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/1.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                          srcset="
+                            ./images/hard-skills/fasades@1x.webp 1x,
+                            ./images/hard-skills/fasades@2x.webp 2x
+                          "
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="
+                            ./images/hard-skills/fasades@1x.jpg 1x,
+                            ./images/hard-skills/fasades@2x.jpg 2x
+                          "
+                          type="image/jpeg"
+                        /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/1.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="f-carousel__slide"
+                data-thumb-src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg"
+              >
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/4.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/4.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="f-carousel__slide"
+                data-thumb-src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg"
+              >
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/12.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/12.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="f-carousel__slide"
+                data-thumb-src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg"
+              >
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/2.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/2.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/3.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/3.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/10.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/10.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/5.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/5.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/6.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/6.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/7.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/7.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/8.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/8.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/9.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/9.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/13.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/13.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/14.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/14.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/15.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/15.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/16.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/16.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="f-carousel__slide">
+                <a
+                  class="carousel-image-link"
+                  href="./images/best-projects/17.jpg"
+                >
+                  <picture>
+                    <!-- <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.webp 1x,
+                          ./images/hard-skills/fasades@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/hard-skills/fasades@1x.jpg 1x,
+                          ./images/hard-skills/fasades@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                      /> -->
+
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/17.jpg"
+                      alt=" Elewacje galerii handlowych, sklepów, biur"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <!-- <div class="f-carousel__slide"></div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <a href="./index.html" class="logo-link footer-logo-link"> DM </a>
+        <div class="footer-nav-wrapper">
+          <nav class="nav footer-nav">
+            <ul class="nav-list footer-nav-list">
+              <li class="nav-item footer-nav-item">
+                <a href="./index.html#about-me" class="nav-link footer-nav-link"
+                  >Kim jestem</a
+                >
+              </li>
+              <li class="nav-item footer-nav-item">
+                <a
+                  href="./index.html#soft-skills"
+                  class="nav-link footer-nav-link"
+                  >Rozwiązania</a
+                >
+              </li>
+              <li class="nav-item footer-nav-item">
+                <a
+                  href="./best-projects.html"
+                  class="nav-link footer-nav-link active-page"
+                  >Najlepsze projekty</a
+                >
+              </li>
+              <li class="nav-item footer-nav-item">
+                <a
+                  href="./index.html#hard-skills"
+                  class="nav-link footer-nav-link"
+                  >Umiejętności</a
+                >
+              </li>
+              <li class="nav-item footer-nav-item">
+                <a href="./portfolio.html" class="nav-link footer-nav-link"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <address class="addres footer-addres">
+            <ul class="addres-list footer-addres-list">
+              <li class="addres-item footer-addres-item">
+                <a
+                  href="mailto:muratovdv76@gmail.com"
+                  class="address-link footer-addres-link"
+                  >muratovdv76@gmail.com</a
+                >
+              </li>
+              <li class="addres-item footer-addres-item">
+                <a
+                  href="tel:+48572112582"
+                  class="address-link footer-addres-link"
+                  >+48 572 112 582</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/mobile-menu.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
+
+    <script type="module">
+      //   with tumbs
+
+      const container = document.getElementById(
+        "best-projects-carousel-with-thumbs"
+      );
+      const options = {
+        infinite: false,
+        Dots: true,
+
+        // Thumbs: {
+        //   type: "classic",
+        //   Carousel: {
+        //     slidesPerPage: 1,
+        //     Navigation: true,
+        //     center: true,
+        //     fill: true,
+        //     dragFree: true,
+        //   },
+        // },
+
+        Thumbs: false,
+        breakpoints: {
+          "(min-width: 768px)": {
+            Dots: false,
+            Thumbs: {
+              type: "classic",
+              //   Carousel: {
+              //     Navigation: true,
+              //   },
+            },
+          },
+        },
+      };
+
+      new Carousel(container, options, { Thumbs });
+    </script>
+    <script type="module">
+      Fancybox.bind("#best-project-1-gallery a", {
+        groupAll: true,
+        Toolbar: {
+          display: {
+            left: ["infobar"],
+            middle: [],
+            right: ["fullscreen", "iterateZoom", "close"],
+          },
+        },
+        Thumbs: {
+          type: false,
+        },
+      });
+    </script>
+  </body>
+</html>

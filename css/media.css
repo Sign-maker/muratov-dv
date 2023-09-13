@@ -457,7 +457,7 @@
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
     /* gap: 64px; */
   }
@@ -476,8 +476,4 @@
   }
 
   /*=========== BEST-PROJECTS.HTML========== */
-
-  .first-best-project {
-    padding-top: 132px;
-  }
 }

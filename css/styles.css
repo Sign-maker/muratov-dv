@@ -124,6 +124,11 @@ body {
   z-index: 100;
 }
 
+.header-not-index {
+  position: static;
+  background-color: var(--background-color-1);
+}
+
 .header-container {
   padding-left: 30px;
   padding-right: 30px;
@@ -516,16 +521,14 @@ body {
   max-width: 1170px;
 }
 
-.first-best-project {
-  padding-top: 124px;
-}
-
 /* ========FANCYBOX========== */
 
-#best-projects-carousel-with-thumbs {
+.carousel-with-thumbs-wrapper:not(:last-child) {
+  margin-bottom: 96px;
 }
 
-#best-projects-carousel-with-thumbs {
+#best-projects-carousel-with-thumbs,
+#best-projects2-carousel-with-thumbs {
   /* --f-carousel-slide-height: 100%; */
 
   height: 450px;
@@ -551,12 +554,14 @@ body {
   --f-carousel-slide-width: calc((100%));
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
-  #best-projects-carousel-with-thumbs {
+  #best-projects-carousel-with-thumbs,
+  #best-projects2-carousel-with-thumbs {
     height: 300px;
   }
 }
 @media (min-width: 768px) {
-  #best-projects-carousel-with-thumbs {
+  #best-projects-carousel-with-thumbs,
+  #best-projects2-carousel-with-thumbs {
     height: 450px;
     /* --f-carousel-slide-width: calc(100% / 2.3); */
     --f-carousel-spacing: 24px;
@@ -564,24 +569,28 @@ body {
 }
 
 @media (min-width: 1200px) {
-  #best-projects-carousel-with-thumbs {
+  #best-projects-carousel-with-thumbs,
+  #best-projects2-carousel-with-thumbs {
     height: 600px;
     /* --f-carousel-slide-width: calc(100% / 3.3); */
     --f-carousel-spacing: 24px;
   }
 }
 
-#best-projects-carousel-with-thumbs .f-carousel__slide {
+#best-projects-carousel-with-thumbs .f-carousel__slide,
+#best-projects2-carousel-with-thumbs .f-carousel__slide {
   border-radius: 15px;
   background-color: var(--background-color-1);
 }
 
-#best-projects-carousel-with-thumbs .f-carousel__slide img {
+#best-projects-carousel-with-thumbs .f-carousel__slide img,
+#best-projects2-carousel-with-thumbs .f-carousel__slide img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-#best-projects-carousel-with-thumbs .f-button svg {
+#best-projects-carousel-with-thumbs .f-button svg,
+#best-projects2-carousel-with-thumbs .f-button svg {
   stroke: white;
 }

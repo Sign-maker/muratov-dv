@@ -1078,7 +1078,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js"></script> -->
     <script type="module">
       //   with tumbs
 
@@ -1102,6 +1102,40 @@
         //     dragFree: true,
         //   },
         // },
+        // content: null,
+        // width: "auto",
+        // height: "auto",
+        // panMode: "drag",
+        // touch: !0,
+        // dragMinThreshold: 3,
+        // lockAxis: !1,
+        // mouseMoveFactor: 1,
+        // mouseMoveFriction: 1,
+        // zoom: !0,
+        // pinchToZoom: !0,
+        // panOnlyZoomed: "auto",
+        // minScale: 1,
+        // maxScale: 2,
+        // friction: 0.25,
+        // dragFriction: 0.35,
+        // decelFriction: 0.05,
+        // click: "toggleZoom",
+        // dblClick: !1,
+        // wheel: "zoom",
+        // wheelLimit: 7,
+        // spinner: !0,
+        // bounds: "auto",
+        // infinite: !1,
+        // rubberband: !0,
+        // bounce: !0,
+        // maxVelocity: 75,
+
+        Panzoom: {
+          // decelFriction: 0.12,
+          dragMinThreshold: 30,
+          maxVelocity: 50,
+          dragFriction: 0.01,
+        },
 
         Thumbs: false,
         breakpoints: {
@@ -1117,7 +1151,8 @@
         },
       };
 
-      new Carousel(container, options, { Thumbs });
+      const myCourusel1 = new Carousel(container, options, { Thumbs });
+      console.log(myCourusel1);
       new Carousel(container2, options, { Thumbs });
     </script>
     <script type="module">

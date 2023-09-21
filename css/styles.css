@@ -531,7 +531,7 @@ body {
 #best-projects2-carousel-with-thumbs {
   /* --f-carousel-slide-height: 100%; */
 
-  height: 450px;
+  height: 375px;
   --f-button-width: 50px;
   --f-button-height: 50px;
 
@@ -551,7 +551,7 @@ body {
   /* --f-button-hover-bg: #f9f9f9; */
   /* --f-button-active-bg: #f0f0f0; */
   --f-carousel-spacing: 12px;
-  --f-carousel-slide-width: calc((100%));
+  --f-carousel-slide-width: calc((100% / 1.2));
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   #best-projects-carousel-with-thumbs,
@@ -563,7 +563,7 @@ body {
   #best-projects-carousel-with-thumbs,
   #best-projects2-carousel-with-thumbs {
     height: 450px;
-    /* --f-carousel-slide-width: calc(100% / 2.3); */
+    --f-carousel-slide-width: calc(100%);
     --f-carousel-spacing: 24px;
   }
 }

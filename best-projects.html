@@ -1132,7 +1132,7 @@
 
         Panzoom: {
           // decelFriction: 0.12,
-          dragMinThreshold: 30,
+          dragMinThreshold: 200,
           maxVelocity: 50,
           dragFriction: 0.01,
         },
@@ -1141,6 +1141,7 @@
         breakpoints: {
           "(min-width: 768px)": {
             Dots: false,
+            dragMinThreshold: 100,
             Thumbs: {
               type: "classic",
               //   Carousel: {

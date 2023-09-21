@@ -1732,12 +1732,13 @@
         // },
         Panzoom: {
           // decelFriction: 0.12,
-          dragMinThreshold: 30,
+          dragMinThreshold: 200,
           maxVelocity: 50,
           dragFriction: 0.01,
         },
         Thumbs: false,
         breakpoints: {
+          dragMinThreshold: 100,
           "(max-width: 768px)": {
             Navigation: false,
           },

@@ -1091,6 +1091,7 @@
       const options = {
         infinite: false,
         Dots: true,
+        Navigation: false,
 
         // Thumbs: {
         //   type: "classic",
@@ -1132,16 +1133,17 @@
 
         Panzoom: {
           // decelFriction: 0.12,
-          dragMinThreshold: 200,
+          dragMinThreshold: 80,
           maxVelocity: 50,
-          dragFriction: 0.01,
+          dragFriction: 0.05,
         },
 
         Thumbs: false,
         breakpoints: {
           "(min-width: 768px)": {
             Dots: false,
-            dragMinThreshold: 100,
+            dragMinThreshold: 30,
+            Navigation: true,
             Thumbs: {
               type: "classic",
               //   Carousel: {

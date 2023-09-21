@@ -1723,6 +1723,7 @@
       const options = {
         center: true,
         infinite: false,
+        Navigation: false,
         // transition: "slide",
         // preload: 3,
 
@@ -1732,15 +1733,15 @@
         // },
         Panzoom: {
           // decelFriction: 0.12,
-          dragMinThreshold: 200,
+          dragMinThreshold: 80,
           maxVelocity: 50,
-          dragFriction: 0.01,
+          dragFriction: 0.05,
         },
         Thumbs: false,
         breakpoints: {
-          dragMinThreshold: 100,
-          "(max-width: 768px)": {
-            Navigation: false,
+          dragMinThreshold: 30,
+          "(min-width: 767px)": {
+            Navigation: true,
           },
         },
       };

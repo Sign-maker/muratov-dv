@@ -4,7 +4,7 @@
   --primary-color: #19191b;
   --background-color-1: #e0e4e8;
   --background-color-2: #f2f2f2;
-  --background-color-3: #62758a;
+  --background-color-3: rgb(98, 117, 138);
   --my-color-1: #1c3c8d;
   --my-color-2: white;
   --hero-photo-color-1: #7c604f;
@@ -636,25 +636,36 @@ body {
   filter: brightness(0.8);
   transform: scale(1.02);
 }
-
-/* .skill-image {
-  position: relative;
-  margin-bottom: 10px;
+/* ================GOTOP BTN =========*/
+.go-top {
+  position: fixed; /* фиксированное позиционирование */
+  right: 24px; /* отступ слева 20px */
+  bottom: 24px; /* выравниваем по центру */
+  cursor: pointer; /* при наведении меняем курсор */
+  font-size: 24px;
+  color: rgba(242, 242, 242, 0.8);
+  border: 2px solid rgba(230, 230, 230, 0.5);
+  background-color: rgba(98, 117, 138, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: none;
 }
-.proportion-type1 {
-  padding-bottom: 56.25%;
-}
-
-.skill-image img {
-  position: absolute;
-  object-fit: cover;
+.go-top div {
   width: 100%;
   height: 100%;
-  transition: filter var(--my-transition-duration)
-      var(--my-transition-timing-function),
-    transform var(--my-transition-duration) var(--my-transition-timing-function);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.skill-image-link:is(:hover, :focus) img {
-  filter: brightness(0.8);
-  transform: scale(1.02);
-} */
+
+/* меняем прозрачность при наведении мышкой */
+.go-top:hover {
+  border: 2px solid rgba(230, 230, 230, 0.8);
+  background-color: rgba(6, 24, 53, 0.5);
+}
+
+/* модификатор для отображения кнопки */
+.go-top--show {
+  display: block;
+}

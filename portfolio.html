@@ -108,10 +108,13 @@
     <main>
       <section class="portfolio-page-section">
         <div class="container portfolio-page-container">
-          <h2 class="question skills-question">Portfolio</h2>
+          <h2 class="question skills-question portfolio-page-question">
+            Portfolio
+          </h2>
           <ul class="portfolio-filter-list" id="myBtnContainer">
             <li class="portfolio-filter-item">
               <button
+                type="button"
                 class="btn filter-btn active"
                 onclick="filterSelection('all')"
               >
@@ -119,22 +122,38 @@
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="btn filter-btn" onclick="filterSelection('prod1')">
+              <button
+                type="button"
+                class="btn filter-btn"
+                onclick="filterSelection('prod1')"
+              >
                 Prod1
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="btn filter-btn" onclick="filterSelection('prod2')">
+              <button
+                type="button"
+                class="btn filter-btn"
+                onclick="filterSelection('prod2')"
+              >
                 Prod2
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="btn filter-btn" onclick="filterSelection('prod3')">
+              <button
+                type="button"
+                class="btn filter-btn"
+                onclick="filterSelection('prod3')"
+              >
                 Prod3
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="btn filter-btn" onclick="filterSelection('prod4')">
+              <button
+                type="button"
+                class="btn filter-btn"
+                onclick="filterSelection('prod4')"
+              >
                 Prod4
               </button>
             </li>
@@ -318,7 +337,10 @@
       </div>
       <p class="footer-author">Created by Dmytro Muratov 2023</p>
     </footer>
+    <div class="go-top"><div>▲</div></div>
     <script type="module" src="./js/mobile-menu.js"></script>
+    <!-- =============GO top btn=============== -->
+    <script type="module" src="./js/go-top-btn.js"></script>
     <script src="./js/filter-gallery.js"></script>
   </body>
 </html>

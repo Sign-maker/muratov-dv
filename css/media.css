@@ -80,6 +80,12 @@
   .footer-nav-list {
     margin-bottom: 40px;
   }
+  /* ======================PORTFOLIO.HTML========== */
+
+  .portfolio-page-question {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -190,9 +196,11 @@
 
   /*=========== BEST-PROJECTS.HTML========== */
   /* ======================PORTFOLIO.HTML========== */
+
   .portfolio-filter-list {
     justify-content: center;
   }
+
   .portfolio-list {
     gap: 16px;
   }

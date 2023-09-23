@@ -100,37 +100,100 @@
     <main>
       <section class="hero-section" id="about-me">
         <div class="container hero-container">
-          <h1 class="hero-title">Dmytro<br />Muratov</h1>
-          <h2 class="question hero-question">Kim jestem?</h2>
+          <div class="hero-title-img-wrapper">
+            <div class="hero-img">
+              <picture>
+                <source
+                  srcset="
+                    ./images/hero/hero-photo-mobile@1x.webp 1x,
+                    ./images/hero/hero-photo-mobile@2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/hero/hero-photo-mobile@1x.jpg 1x,
+                    ./images/hero/hero-photo-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/hero/hero-photo-tablet@1x.webp 1x,
+                    ./images/hero/hero-photo-tablet@2x.webp 2x
+                  "
+                  media="(max-width:1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/hero/hero-photo-tablet@1x.jpg 1x,
+                    ./images/hero/hero-photo-tablet@2x.jpg 2x
+                  "
+                  media="(max-width:1199px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/hero/hero-photo-desktop@1x.webp 1x,
+                    ./images/hero/hero-photo-desktop@2x.webp 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/hero/hero-photo-desktop@1x.jpg 1x,
+                    ./images/hero/hero-photo-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
 
-          <h3 class="hero-profession">
-            Kierownik agencji reklamowej w Ukraine przed wojną
-          </h3>
+                <img
+                  src="./images/hero/hero-photo-desktop@1x.jpg"
+                  alt="hero-photo"
+                />
+              </picture>
+            </div>
+            <div class="hero-title-wrapper">
+              <h1 class="hero-title">Dmytro<br />Muratov</h1>
+              <h2 class="question hero-question">Kim jestem?</h2>
 
-          <p class="hero-ocupation">
-            Produkcja reklamy zewnętrznej i elewacji wentylowanych
-          </p>
-          <ul class="futures-list">
-            <li class="futures-item">
-              <p class="futures-number" translate="no">20<sup>+</sup></p>
-              <p class="futures-descr">lat<br />doświadczenia</p>
-            </li>
-            <li class="futures-item">
-              <p class="futures-number" translate="no">1000<sup>+</sup></p>
-              <p class="futures-descr">zrealizowanych projektów</p>
-            </li>
-            <li class="futures-item">
-              <p class="futures-number" translate="no">100%<sup>+</sup></p>
-              <p class="futures-descr">
-                zrobione super<br />&#9733; &#9733; &#9733; &#9733; &#9733;
-              </p>
-            </li>
-          </ul>
+              <h3 class="hero-profession">
+                Kierownik agencji reklamowej w Ukraine przed wojną
+              </h3>
+            </div>
+          </div>
 
-          <p class="hero-wishes">
-            Pragnę dalej się rozwijać i przyczyniać się do upiększania polskich
-            miast
-          </p>
+          <div class="hero-subtitle-wrapper">
+            <p class="hero-ocupation">
+              Produkcja reklamy zewnętrznej i elewacji wentylowanych
+            </p>
+            <ul class="futures-list">
+              <li class="futures-item">
+                <p class="futures-number" translate="no">20<sup>+</sup></p>
+                <p class="futures-descr">lat<br />doświadczenia</p>
+              </li>
+              <li class="futures-item">
+                <p class="futures-number" translate="no">1000<sup>+</sup></p>
+                <p class="futures-descr">zrealizowanych projektów</p>
+              </li>
+              <li class="futures-item">
+                <p class="futures-number" translate="no">100%<sup>+</sup></p>
+                <p class="futures-descr">
+                  zrobione super<br />&#9733; &#9733; &#9733; &#9733; &#9733;
+                </p>
+              </li>
+            </ul>
+
+            <p class="hero-wishes">
+              Pragnę dalej się rozwijać i przyczyniać się do upiększania
+              polskich miast
+            </p>
+          </div>
         </div>
       </section>
 
@@ -1583,6 +1646,7 @@
           </address>
         </div>
       </div>
+      <p class="footer-author">Created by Dmytro Muratov 2023</p>
     </footer>
 
     <!-- =============MOBILE MENU=============== -->

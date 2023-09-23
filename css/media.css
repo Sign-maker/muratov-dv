@@ -27,7 +27,12 @@
   /* ====================HEADER========================== */
 
   /* ====================HERO========================== */
-
+  .hero-img {
+    margin-bottom: 20px;
+  }
+  .hero-profession {
+    margin-bottom: 48px;
+  }
   /* ====================SOFT-SKILLS========================== */
   .soft-skills-item {
     padding-left: 20px;
@@ -70,7 +75,7 @@
   }
   .footer {
     padding-top: 64px;
-    padding-bottom: 96px;
+    padding-bottom: 48px;
   }
   .footer-nav-list {
     margin-bottom: 40px;
@@ -85,52 +90,37 @@
   }
   /* ====================HERO========================== */
   .hero-section {
-    padding-top: 100px;
-    background-image: url(../images/hero/hero-bg-tablet@1x.jpg),
-      linear-gradient(
-        45deg,
-        var(--hero-photo-color-1),
-        var(--hero-photo-color-2)
-      ),
-      linear-gradient(var(--background-color-2), var(--background-color-2));
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 768px 574px, 768px 574px, auto;
   }
+
   .hero-container {
     padding-left: 40px;
     padding-right: 40px;
   }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .hero-section {
-      background-image: url(../images/hero/hero-bg-tablet@2x.jpg),
-        linear-gradient(
-          45deg,
-          var(--hero-photo-color-1),
-          var(--hero-photo-color-2)
-        ),
-        linear-gradient(var(--background-color-2), var(--background-color-2));
-    }
+  .hero-title-img-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
   }
   .hero-title {
-    font-size: 45px;
-    color: var(--background-color-1);
-    margin-bottom: 40px;
+    font-size: 36px;
+    margin-bottom: 16px;
   }
 
   .hero-question {
-    margin-bottom: 134px;
-    color: var(--background-color-1);
+    margin-bottom: 32px;
     letter-spacing: 0.05em;
   }
 
   .hero-profession {
-    max-width: 408px;
-    color: var(--background-color-1);
-    margin-bottom: 100px;
-    font-weight: 500;
+    max-width: 381px;
+  }
+  .hero-ocupation {
+    text-align: center;
+  }
+  .futures-list {
+    justify-content: space-evenly;
   }
 
   .futures-item {
@@ -145,6 +135,7 @@
   }
   .hero-wishes {
     font-size: 18px;
+    text-align: center;
   }
 
   /* ====================SOFT-SKILLS========================== */
@@ -194,23 +185,23 @@
   }
   .footer {
     padding-top: 64px;
-    padding-bottom: 96px;
+    padding-bottom: 48px;
   }
 
   /*=========== BEST-PROJECTS.HTML========== */
+  /* ======================PORTFOLIO.HTML========== */
+  .portfolio-filter-list {
+    justify-content: center;
+  }
+  .portfolio-list {
+    gap: 16px;
+  }
+  .portfolio-item {
+    flex-basis: calc((100% - 64px) / 4);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .hero-ocupation {
-    text-align: center;
-  }
-  .hero-wishes {
-    text-align: center;
-  }
-  .futures-list {
-    justify-content: space-evenly;
-  }
-
   /* ====================FOOTER========================== */
   .footer-nav-wrapper {
     display: flex;
@@ -245,7 +236,7 @@
   }
   .header-logo-link {
     z-index: 102;
-    padding: 16px 0;
+    padding: 12px 0;
   }
   .header-nav-list {
     margin-bottom: 64px;
@@ -278,7 +269,7 @@
     height: 4px;
     background-color: var(--primary-color);
     border-radius: 2px;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     transition: transform var(--my-transition-duration)
       var(--my-transition-timing-function);
   }
@@ -320,12 +311,12 @@
   }
 
   .header-logo-link {
-    padding: 26px 0;
+    padding: 24px 0;
   }
 
   .header-nav-wrapper {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     flex: 1;
   }
@@ -343,7 +334,9 @@
   }
   .header-addres-list {
     display: flex;
-    gap: 20px;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 5px;
   }
 
   .address-link {
@@ -356,17 +349,6 @@
   /* ====================HERO========================== */
 
   .hero-section {
-    padding-top: 120px;
-    padding-bottom: 50px;
-    background-image: url(../images/hero/hero-bg-desktop@1x.jpg),
-      linear-gradient(
-        45deg,
-        var(--hero-photo-color-1),
-        var(--hero-photo-color-2)
-      ),
-      linear-gradient(var(--background-color-2), var(--background-color-2));
-
-    background-size: 1200px 897px, 1200px 897px, auto;
   }
 
   .hero-container {
@@ -374,55 +356,38 @@
     padding-right: 50px;
   }
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .hero-section {
-      background-image: url(../images/hero/hero-bg-desktop@2x.jpg),
-        linear-gradient(
-          45deg,
-          var(--hero-photo-color-1),
-          var(--hero-photo-color-2)
-        ),
-        linear-gradient(var(--background-color-2), var(--background-color-2));
-    }
-  }
-
   .hero-title {
     font-size: 60px;
+    margin-bottom: 28px;
   }
 
   .hero-question {
-    margin-bottom: 100px;
+    margin-bottom: 52px;
   }
 
   .hero-profession {
-    font-size: 38px;
-    max-width: 468px;
-    margin-bottom: 46px;
+    font-size: 46px;
+    max-width: 574px;
   }
   .hero-ocupation {
-    color: var(--background-color-1);
-    margin-bottom: 20px;
-    max-width: 356px;
-    font-weight: 500;
+    font-size: 34px;
+    margin-bottom: 30px;
   }
   .futures-list {
-    margin-bottom: 20px;
-    max-width: 588px;
+    margin-bottom: 30px;
+  }
+  .futures-item {
+    max-width: 220px;
   }
   .futures-number {
-    color: var(--background-color-1);
+    font-size: 72px;
   }
 
   .futures-descr {
-    color: var(--background-color-1);
-    font-weight: 500;
+    font-size: 20px;
   }
   .hero-wishes {
-    font-size: 16px;
-    color: var(--background-color-1);
-    font-weight: 400;
+    font-size: 22px;
   }
 
   /* ====================SOFT-SKILLS========================== */
@@ -463,7 +428,7 @@
   }
   .footer {
     padding-top: 96px;
-    padding-bottom: 96px;
+    padding-bottom: 48px;
   }
   .footer-nav-list {
     display: flex;
@@ -476,4 +441,11 @@
   }
 
   /*=========== BEST-PROJECTS.HTML========== */
+  /* ===================PORTFOLIO.HTML========== */
+  .portfolio-list {
+    gap: 24px;
+  }
+  .portfolio-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
 }

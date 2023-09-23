@@ -34,12 +34,19 @@
     />
   </head>
   <body>
-    <header class="header header-not-index">
+    <header class="header">
       <div class="container header-container">
         <a href="./index.html" class="logo-link header-logo-link"> DM </a>
         <div class="header-nav-wrapper">
           <nav class="nav header-nav">
             <ul class="nav-list header-nav-list">
+              <li class="nav-item header-nav-item about-me">
+                <a
+                  href="./index.html#about-me"
+                  class="nav-link header-nav-link menu-link"
+                  >Kim jestem</a
+                >
+              </li>
               <li class="nav-item header-nav-item">
                 <a
                   href="./index.html#soft-skills"
@@ -98,7 +105,157 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="portfolio-page-section">
+        <div class="container portfolio-page-container">
+          <h2 class="question skills-question">Portfolio</h2>
+          <ul class="portfolio-filter-list" id="myBtnContainer">
+            <li class="portfolio-filter-item">
+              <button
+                class="btn filter-btn active"
+                onclick="filterSelection('all')"
+              >
+                All
+              </button>
+            </li>
+            <li class="portfolio-filter-item">
+              <button class="btn filter-btn" onclick="filterSelection('prod1')">
+                Prod1
+              </button>
+            </li>
+            <li class="portfolio-filter-item">
+              <button class="btn filter-btn" onclick="filterSelection('prod2')">
+                Prod2
+              </button>
+            </li>
+            <li class="portfolio-filter-item">
+              <button class="btn filter-btn" onclick="filterSelection('prod3')">
+                Prod3
+              </button>
+            </li>
+            <li class="portfolio-filter-item">
+              <button class="btn filter-btn" onclick="filterSelection('prod4')">
+                Prod4
+              </button>
+            </li>
+          </ul>
+          <ul class="portfolio-list">
+            <li class="portfolio-item prod1">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/7.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod2">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/1.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod3">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/6.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod4">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/5.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod1">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/1.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod2">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/2.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod2">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/3.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+            <li class="portfolio-item prod4">
+              <div class="portfolio-image proportion-type2">
+                <a class="porfolio-page-img-link">
+                  <picture>
+                    <source />
+                    <img
+                      loading="lazy"
+                      src="./images/best-projects/4.jpg"
+                      alt=""
+                    />
+                  </picture>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container footer-container">
@@ -159,7 +316,9 @@
           </address>
         </div>
       </div>
+      <p class="footer-author">Created by Dmytro Muratov 2023</p>
     </footer>
     <script type="module" src="./js/mobile-menu.js"></script>
+    <script src="./js/filter-gallery.js"></script>
   </body>
 </html>

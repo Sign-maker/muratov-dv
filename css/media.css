@@ -126,7 +126,8 @@
     text-align: center;
   }
   .futures-list {
-    justify-content: space-evenly;
+    gap: 50px;
+    justify-content: center;
   }
 
   .futures-item {
@@ -382,6 +383,7 @@
   }
   .futures-list {
     margin-bottom: 30px;
+    gap: 70px;
   }
   .futures-item {
   }

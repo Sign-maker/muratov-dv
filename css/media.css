@@ -205,7 +205,7 @@
     gap: 16px;
   }
   .portfolio-item {
-    flex-basis: calc((100% - 64px) / 4);
+    flex-basis: calc((100% - 48px) / 4);
   }
 }
 

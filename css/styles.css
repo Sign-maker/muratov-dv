@@ -239,6 +239,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* flex для  chrome-mobile бага, когда подставляет шрифт телефона по умолчанию после применеия стилей, и все ломается */
 }
 .futures-number {
   color: var(--my-color-1);

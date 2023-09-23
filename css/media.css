@@ -130,7 +130,6 @@
   }
 
   .futures-item {
-    max-width: 165px;
   }
   .futures-number {
     font-size: 56px;
@@ -385,7 +384,6 @@
     margin-bottom: 30px;
   }
   .futures-item {
-    max-width: 220px;
   }
   .futures-number {
     font-size: 72px;

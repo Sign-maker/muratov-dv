@@ -236,7 +236,6 @@ body {
   margin-bottom: 50px;
 }
 .futures-item {
-  max-width: 100px;
 }
 .futures-number {
   color: var(--my-color-1);

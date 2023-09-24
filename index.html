@@ -6,7 +6,7 @@
     <title>Portfolio Dmytro Muratov</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="mask-icon" href="./mask-icon.svg" color="#000000" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
@@ -15,14 +15,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
       rel="stylesheet"
-    />
-    <link
+    /> -->
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
       integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> -->
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/fancybox.css" />
@@ -1664,6 +1665,87 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script> -->
+
+    <script type="module">
+      import { Carousel } from "./js/carousel.esm.js";
+
+      // without tumbs
+
+      const container = document.getElementById("best-projects-carousel");
+      const options = {
+        Dots: false,
+        center: true,
+        infinite: false,
+        Navigation: false,
+        // transition: "slide",
+        // preload: 3,
+
+        // Dots: {
+        //   isDynamic: false,
+        //   dynamicFrom: 11,
+        // },
+        Panzoom: {
+          // decelFriction: 0.12,
+          dragMinThreshold: 20,
+          maxVelocity: 50,
+          // dragFriction: 0.05,
+        },
+        Thumbs: false,
+        breakpoints: {
+          dragMinThreshold: 10,
+          "(min-width: 767px)": {
+            Navigation: true,
+          },
+        },
+      };
+
+      new Carousel(container, options);
+
+      const container1 = document.getElementById("portfolio-carousel");
+      const options1 = {
+        Dots: false,
+        center: true,
+        infinite: false,
+        // transition: "fadeFast",
+        // preload: 3,
+
+        Thumbs: false,
+        breakpoints: {
+          "(max-width: 768px)": {
+            Navigation: false,
+          },
+        },
+      };
+      new Carousel(container1, options1);
+      // with tumbs
+
+      // const container = document.getElementById("best-projects-carousel");
+      // const options = {
+      //   infinite: false,
+      //   Dots: false,
+      //   // Thumbs: {
+      //   //   type: "classic",
+      //   //   Carousel: {
+      //   //     slidesPerPage: 1,
+      //   //     Navigation: true,
+      //   //     center: true,
+      //   //     fill: true,
+      //   //     dragFree: true,
+      //   //   },
+      //   // },
+      //   Thumbs: false,
+      //   breakpoints: {
+      //     "(min-width: 768px)": {
+      //       Thumbs: {
+      //         type: "modern",
+      //       },
+      //     },
+      //   },
+      // };
+
+      // new Carousel(container, options, { Thumbs });
+    </script>
+
     <script type="module">
       import { Fancybox } from "./js/fancybox.esm.js";
       // Fancybox.bind("[data-fancybox]", {
@@ -1784,84 +1866,6 @@
           type: false,
         },
       });
-    </script>
-
-    <script type="module">
-      import { Carousel } from "./js/carousel.esm.js";
-
-      // without tumbs
-
-      const container = document.getElementById("best-projects-carousel");
-      const options = {
-        center: true,
-        infinite: false,
-        Navigation: false,
-        // transition: "slide",
-        // preload: 3,
-
-        // Dots: {
-        //   isDynamic: false,
-        //   dynamicFrom: 11,
-        // },
-        Panzoom: {
-          // decelFriction: 0.12,
-          dragMinThreshold: 20,
-          maxVelocity: 50,
-          // dragFriction: 0.05,
-        },
-        Thumbs: false,
-        breakpoints: {
-          dragMinThreshold: 10,
-          "(min-width: 767px)": {
-            Navigation: true,
-          },
-        },
-      };
-
-      new Carousel(container, options);
-
-      const container1 = document.getElementById("portfolio-carousel");
-      const options1 = {
-        center: true,
-        infinite: false,
-        // transition: "fadeFast",
-        // preload: 3,
-
-        Thumbs: false,
-        breakpoints: {
-          "(max-width: 768px)": {
-            Navigation: false,
-          },
-        },
-      };
-      new Carousel(container1, options1);
-      // with tumbs
-
-      // const container = document.getElementById("best-projects-carousel");
-      // const options = {
-      //   infinite: false,
-      //   Dots: false,
-      //   // Thumbs: {
-      //   //   type: "classic",
-      //   //   Carousel: {
-      //   //     slidesPerPage: 1,
-      //   //     Navigation: true,
-      //   //     center: true,
-      //   //     fill: true,
-      //   //     dragFree: true,
-      //   //   },
-      //   // },
-      //   Thumbs: false,
-      //   breakpoints: {
-      //     "(min-width: 768px)": {
-      //       Thumbs: {
-      //         type: "modern",
-      //       },
-      //     },
-      //   },
-      // };
-
-      // new Carousel(container, options, { Thumbs });
     </script>
   </body>
 </html>

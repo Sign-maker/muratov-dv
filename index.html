@@ -25,18 +25,9 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/media.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css"
-    />
+    <link rel="stylesheet" href="./css/fancybox.css" />
+    <link rel="stylesheet" href="./css/carousel.css" />
+    <!-- <link rel="stylesheet" href="./css/carousel.thumbs.css" /> -->
   </head>
   <body>
     <header class="header">
@@ -1670,10 +1661,11 @@
     <script type="module" src="./js/go-top-btn.js"></script>
     <!-- =============FancyApps=============== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js"></script> -->
     <script type="module">
+      import { Fancybox } from "./js/fancybox.esm.js";
       // Fancybox.bind("[data-fancybox]", {
       //   // Your custom options
       // });
@@ -1795,6 +1787,8 @@
     </script>
 
     <script type="module">
+      import { Carousel } from "./js/carousel.esm.js";
+
       // without tumbs
 
       const container = document.getElementById("best-projects-carousel");

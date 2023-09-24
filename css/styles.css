@@ -640,7 +640,7 @@ body {
   bottom: 56px; /* выравниваем по центру */
   cursor: pointer; /* при наведении меняем курсор */
   font-size: 24px;
-  color: rgba(242, 242, 242, 0.8);
+  /* color: rgba(242, 242, 242, 0.8); */
   border: 2px solid rgba(230, 230, 230, 0.5);
   background-color: rgba(98, 117, 138, 0.7);
   width: 50px;

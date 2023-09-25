@@ -1671,19 +1671,14 @@
 
       // without tumbs
 
-      const container = document.getElementById("best-projects-carousel");
+      const container1 = document.getElementById("best-projects-carousel");
+      const container2 = document.getElementById("portfolio-carousel");
       const options = {
         Dots: false,
         center: true,
         infinite: false,
-        Navigation: false,
-        // transition: "slide",
-        // preload: 3,
+        // Navigation: false,
 
-        // Dots: {
-        //   isDynamic: false,
-        //   dynamicFrom: 11,
-        // },
         Panzoom: {
           // decelFriction: 0.12,
           dragMinThreshold: 20,
@@ -1698,25 +1693,8 @@
           },
         },
       };
-
-      new Carousel(container, options);
-
-      const container1 = document.getElementById("portfolio-carousel");
-      const options1 = {
-        Dots: false,
-        center: true,
-        infinite: false,
-        // transition: "fadeFast",
-        // preload: 3,
-
-        Thumbs: false,
-        breakpoints: {
-          "(max-width: 768px)": {
-            Navigation: false,
-          },
-        },
-      };
-      new Carousel(container1, options1);
+      new Carousel(container1, options);
+      new Carousel(container2, options);
       // with tumbs
 
       // const container = document.getElementById("best-projects-carousel");

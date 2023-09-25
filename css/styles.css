@@ -121,6 +121,7 @@ img {
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--primary-color);
+  background-color: white;
 }
 
 /* ====================COMMON STYLES========================== */
@@ -455,6 +456,8 @@ body {
 }
 
 #best-projects-carousel,
+#best-projects-page-carousel-1,
+#best-projects-page-carousel-2,
 #portfolio-carousel {
   /* --f-carousel-slide-height: 100%; */
 
@@ -482,12 +485,16 @@ body {
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   #best-projects-carousel,
+  #best-projects-page-carousel-1,
+  #best-projects-page-carousel-2,
   #portfolio-carousel {
     height: 300px;
   }
 }
 @media (min-width: 768px) {
   #best-projects-carousel,
+  #best-projects-page-carousel-1,
+  #best-projects-page-carousel-2,
   #portfolio-carousel {
     height: 375px;
     --f-carousel-slide-width: calc(100% / 2.3);
@@ -497,6 +504,8 @@ body {
 
 @media (min-width: 1200px) {
   #best-projects-carousel,
+  #best-projects-page-carousel-1,
+  #best-projects-page-carousel-2,
   #portfolio-carousel {
     height: 450px;
     --f-carousel-slide-width: calc(100% / 3.3);
@@ -505,12 +514,16 @@ body {
 }
 
 #best-projects-carousel .f-carousel__slide,
+#best-projects-page-carousel-1 .f-carousel__slide,
+#best-projects-page-carousel-2 .f-carousel__slide,
 #portfolio-carousel .f-carousel__slide {
   border-radius: 15px;
   background-color: var(--background-color-1);
 }
 
 #best-projects-carousel .f-carousel__slide img,
+#best-projects-page-carousel-1 .f-carousel__slide img,
+#best-projects-page-carousel-2 .f-carousel__slide img,
 #portfolio-carousel .f-carousel__slide img {
   object-fit: cover;
   width: 100%;
@@ -518,87 +531,30 @@ body {
 }
 
 #best-projects-carousel .f-button svg,
+#best-projects-page-carousel-1 .f-button svg,
+#best-projects-page-carousel-2 .f-button svg,
 #portfolio-carousel .f-button svg {
   stroke: white;
 }
 
-/*=========== BEST-PROJECTS.HTML========== */
+/* =========== BEST-PROJECTS.HTML==========  */
 .best-project-page-container {
-  max-width: 1170px;
+}
+.best-projects-page-section {
+  padding-top: 56px;
+  padding-bottom: 64px;
 }
 
 /* ========FANCYBOX========== */
-
-.carousel-with-thumbs-wrapper:not(:last-child) {
-  margin-bottom: 96px;
+.best-projects-page-item:nth-child(2n + 1) {
+  background-color: var(--background-color-2);
 }
-
-#best-projects-carousel-with-thumbs,
-#best-projects2-carousel-with-thumbs {
-  /* --f-carousel-slide-height: 100%; */
-
-  height: 375px;
-  --f-button-width: 50px;
-  --f-button-height: 50px;
-
-  --f-button-svg-width: 36px;
-  --f-button-svg-height: 36px;
-  --f-button-svg-stroke-width: 2.5;
-  --f-button-svg-fill: none;
-  --f-button-svg-filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.5));
-  --f-button-svg-disabled-opacity: 0.5;
-
-  --f-button-color: rgb(71 85 105);
-  --f-button-border-radius: 50%;
-  /* --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
-    0 3px 7px -3px rgb(0 0 0 / 30%); */
-
-  --f-button-bg: transparent;
-  /* --f-button-hover-bg: #f9f9f9; */
-  /* --f-button-active-bg: #f0f0f0; */
-  --f-carousel-spacing: 12px;
-  --f-carousel-slide-width: calc((100%));
+.best-projects-page-item {
+  padding-top: 32px;
 }
-@media screen and (max-width: 767px) and (orientation: landscape) {
-  #best-projects-carousel-with-thumbs,
-  #best-projects2-carousel-with-thumbs {
-    height: 300px;
-  }
-}
-@media (min-width: 768px) {
-  #best-projects-carousel-with-thumbs,
-  #best-projects2-carousel-with-thumbs {
-    height: 450px;
-    /* --f-carousel-slide-width: calc(100%); */
-    --f-carousel-spacing: 24px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #best-projects-carousel-with-thumbs,
-  #best-projects2-carousel-with-thumbs {
-    height: 600px;
-    /* --f-carousel-slide-width: calc(100% / 3.3); */
-    --f-carousel-spacing: 24px;
-  }
-}
-
-#best-projects-carousel-with-thumbs .f-carousel__slide,
-#best-projects2-carousel-with-thumbs .f-carousel__slide {
-  border-radius: 15px;
-  background-color: var(--background-color-1);
-}
-
-#best-projects-carousel-with-thumbs .f-carousel__slide img,
-#best-projects2-carousel-with-thumbs .f-carousel__slide img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-#best-projects-carousel-with-thumbs .f-button svg,
-#best-projects2-carousel-with-thumbs .f-button svg {
-  stroke: white;
+.best-projects-page-item:not(:last-child) {
+  padding-top: 32px;
+  padding-bottom: 96px;
 }
 
 /* ======================PORTFOLIO.HTML========== */

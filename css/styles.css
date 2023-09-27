@@ -373,6 +373,11 @@ body {
   max-width: 1920px;
 }
 
+.best-project-title {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .btn-more {
   color: var(--background-color-2);
   font-size: 18px;
@@ -454,6 +459,9 @@ body {
 #portfolio-gallery {
   margin-bottom: 48px;
 }
+.f-carousel {
+  overflow: hidden;
+}
 
 #best-projects-carousel,
 #best-projects-page-carousel-1,
@@ -481,6 +489,7 @@ body {
   /* --f-button-hover-bg: #f9f9f9; */
   /* --f-button-active-bg: #f0f0f0; */
   --f-carousel-spacing: 12px;
+  /* --f-carousel-slide-width: auto; */
   --f-carousel-slide-width: calc((100%) / 1.2);
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
@@ -508,6 +517,7 @@ body {
   #best-projects-page-carousel-2,
   #portfolio-carousel {
     height: 450px;
+
     --f-carousel-slide-width: calc(100% / 3.3);
     --f-carousel-spacing: 24px;
   }
@@ -524,10 +534,13 @@ body {
 #best-projects-page-carousel-1 .f-carousel__slide,
 #best-projects-page-carousel-2 .f-carousel__slide,
 #portfolio-carousel .f-carousel__slide {
+  /* width: auto; */
   border-radius: 15px;
-  z-index: 2;
-  background-color: var(--background-color-1);
-  outline: 1px solid rgba(100, 100, 100, 0.2);
+  /* z-index: 2; */
+  /* padding: 25px; */
+  /* background-color: var(--background-color-1); */
+  background-color: rgb(36, 36, 36);
+  /* outline: 1px solid rgba(100, 100, 100, 0.2); */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 

@@ -466,6 +466,9 @@ body {
 #best-projects-carousel,
 #best-projects-page-carousel-1,
 #best-projects-page-carousel-2,
+#best-projects-page-carousel-3,
+#best-projects-page-carousel-4,
+#best-projects-page-carousel-5,
 #portfolio-carousel {
   /* --f-carousel-slide-height: 100%; */
 
@@ -496,6 +499,9 @@ body {
   #best-projects-carousel,
   #best-projects-page-carousel-1,
   #best-projects-page-carousel-2,
+  #best-projects-page-carousel-3,
+  #best-projects-page-carousel-4,
+  #best-projects-page-carousel-5,
   #portfolio-carousel {
     height: 300px;
   }
@@ -504,6 +510,9 @@ body {
   #best-projects-carousel,
   #best-projects-page-carousel-1,
   #best-projects-page-carousel-2,
+  #best-projects-page-carousel-3,
+  #best-projects-page-carousel-4,
+  #best-projects-page-carousel-5,
   #portfolio-carousel {
     height: 375px;
     --f-carousel-slide-width: calc(100% / 2.3);
@@ -515,6 +524,9 @@ body {
   #best-projects-carousel,
   #best-projects-page-carousel-1,
   #best-projects-page-carousel-2,
+  #best-projects-page-carousel-3,
+  #best-projects-page-carousel-4,
+  #best-projects-page-carousel-5,
   #portfolio-carousel {
     height: 450px;
 
@@ -522,10 +534,13 @@ body {
     --f-carousel-spacing: 24px;
   }
 }
-#portfolio-carousel .f-carousel__viewport,
 #best-projects-carousel .f-carousel__viewport,
 #best-projects-page-carousel-1 .f-carousel__viewport,
-#best-projects-page-carousel-2 .f-carousel__viewport {
+#best-projects-page-carousel-2 .f-carousel__viewport,
+#best-projects-page-carousel-3 .f-carousel__viewport,
+#best-projects-page-carousel-4 .f-carousel__viewport,
+#best-projects-page-carousel-5 .f-carousel__viewport,
+#portfolio-carousel .f-carousel__viewport {
   /* overflow: auto; */
   padding-top: 5px;
   padding-bottom: 5px;
@@ -533,6 +548,9 @@ body {
 #best-projects-carousel .f-carousel__slide,
 #best-projects-page-carousel-1 .f-carousel__slide,
 #best-projects-page-carousel-2 .f-carousel__slide,
+#best-projects-page-carousel-3 .f-carousel__slide,
+#best-projects-page-carousel-4 .f-carousel__slide,
+#best-projects-page-carousel-5 .f-carousel__slide,
 #portfolio-carousel .f-carousel__slide {
   /* width: auto; */
   border-radius: 15px;
@@ -547,6 +565,9 @@ body {
 #best-projects-carousel .f-carousel__slide img,
 #best-projects-page-carousel-1 .f-carousel__slide img,
 #best-projects-page-carousel-2 .f-carousel__slide img,
+#best-projects-page-carousel-3 .f-carousel__slide img,
+#best-projects-page-carousel-4 .f-carousel__slide img,
+#best-projects-page-carousel-5 .f-carousel__slide img,
 #portfolio-carousel .f-carousel__slide img {
   object-fit: cover;
   width: 100%;
@@ -556,6 +577,9 @@ body {
 #best-projects-carousel .f-button svg,
 #best-projects-page-carousel-1 .f-button svg,
 #best-projects-page-carousel-2 .f-button svg,
+#best-projects-page-carousel-3 .f-button svg,
+#best-projects-page-carousel-4 .f-button svg,
+#best-projects-page-carousel-5 .f-button svg,
 #portfolio-carousel .f-button svg {
   stroke: white;
 }
@@ -575,7 +599,7 @@ body {
 .best-projects-page-item {
   padding-top: 32px;
 }
-.best-projects-page-item:not(:last-child) {
+.best-projects-page-item {
   padding-top: 32px;
   padding-bottom: 96px;
 }

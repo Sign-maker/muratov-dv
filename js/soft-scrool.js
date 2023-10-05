@@ -9,13 +9,13 @@
 //   // scrollToHash(myHash);
 // }
 
-function scrollToHash(myHash) {
-  // console.log(myHash);
-  document.getElementById(myHash).scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-}
+// function scrollToHash(myHash) {
+//   // console.log(myHash);
+//   document.getElementById(myHash).scrollIntoView({
+//     behavior: "smooth",
+//     block: "start",
+//   });
+// }
 
 // const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -33,17 +33,17 @@ function scrollToHash(myHash) {
 // });
 
 // // Переход с другой страницы
-document.addEventListener("DOMContentLoaded", onLoad);
-// onLoad();
-function onLoad(event) {
-  // event.preventDefault;
-  const myHash = document.location.hash.substring(1);
-  document.location.hash = "";
-  if (myHash) {
-    // console.log(myHash);
-    scrollToHash(myHash);
-  }
-}
+// document.addEventListener("DOMContentLoaded", onLoad);
+// // onLoad();
+// function onLoad(event) {
+//   // event.preventDefault;
+//   const myHash = document.location.hash.substring(1);
+//   document.location.hash = "";
+//   if (myHash) {
+//     // console.log(myHash);
+//     scrollToHash(myHash);
+//   }
+// }
 
 // // Переход на текущей странице
 

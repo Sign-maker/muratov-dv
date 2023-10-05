@@ -69,6 +69,9 @@
   --my-transition-timing-function: ease-in-out;
   --my-transition-delay: 250ms;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Reset styles */
 h1,

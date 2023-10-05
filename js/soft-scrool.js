@@ -23,6 +23,7 @@ function onLoad(event) {
   const myHash = document.location.hash.substring(1);
   document.location.hash = "";
   if (myHash) {
+    console.log(myHash);
     scroll(myHash);
   }
 }

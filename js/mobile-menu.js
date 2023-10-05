@@ -11,10 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   menu.querySelectorAll(".menu-link").forEach((link) => {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+      const delayMilliseconds = 500; // Задержка в миллисекундах (2 секунды)
+      // Запускаем таймер, который выполнит переход по ссылке через задержку
+      setTimeout(() => {
+        window.location.href = link.getAttribute("href"); // Выполняем переход
+      }, delayMilliseconds);
+
       body.classList.remove("lock"); // Toggle body scrolling
       menu.classList.remove("active"); // Toggle menu visibility
       menuBtn.classList.remove("active-icon"); // Toggle menu icon state
+      console.log("qwwer");
     });
   });
 });

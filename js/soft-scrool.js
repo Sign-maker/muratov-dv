@@ -17,12 +17,14 @@
 
 // Переход с другой страницы
 document.addEventListener("DOMContentLoaded", onLoad);
-
+// onLoad();
 function onLoad(event) {
   event.preventDefault;
   const myHash = location.hash.substring(1);
   location.hash = "";
-  if (myHash) scroll(myHash);
+  if (myHash) {
+    scroll(myHash);
+  }
 }
 
 // Переход на текущей странице

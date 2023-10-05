@@ -23,9 +23,13 @@ function trackScroll() {
 
 function goTop() {
   // пока не вернулись в начало страницы
-  if (window.scrollY > 0) {
-    // скроллим наверх
-    window.scrollBy(0, -75); // второй аргумент - скорость
-    setTimeout(goTop, 0); // входим в рекурсию
-  }
+  // if (window.scrollY > 0) {
+  //   // скроллим наверх
+  //   window.scrollBy(0, -75); // второй аргумент - скорость
+  //   setTimeout(goTop, 0); // входим в рекурсию
+  // }
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 }

@@ -173,11 +173,12 @@ body {
 .header {
   background-color: var(--background-color-1);
   /* background: linear-gradient(180deg, #f2f2f2 0%, rgba(242, 242, 242, 0) 100%); */
-  /* position: absolute;
+  position: fixed;
   top: 0px;
   width: 100%;
-  left: auto; */
+  /* left: auto;  */
   z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .header-container {
@@ -233,7 +234,7 @@ body {
   transition: opacity var(--my-transition-duration)
     var(--my-transition-timing-function);
 }
-.nav-link:is(:hover, :focus),
+.nav-link:is(:hover),
 .address-link:is(:hover, :focus) {
   opacity: 0.6;
 }
@@ -243,6 +244,7 @@ body {
 /* ====================HERO========================== */
 
 .hero-section {
+  padding-top: 64px;
   padding-bottom: 64px;
   background-color: var(--background-color-2);
 }
@@ -252,11 +254,16 @@ body {
   padding-right: 30px;
 }
 .hero-img {
-  background: linear-gradient(
+  aspect-ratio: 368 / 231;
+  background-image: linear-gradient(
     41deg,
     rgba(158, 126, 97, 1) 0%,
     rgba(196, 197, 164, 1) 100%
   );
+}
+.hero-img img {
+  /* width: 100%; */
+  /* height: 100%; */
 }
 .hero-title {
   font-size: 32px;
@@ -556,8 +563,7 @@ body {
   border-radius: 15px;
   /* z-index: 2; */
   /* padding: 25px; */
-  /* background-color: var(--background-color-1); */
-  background-color: rgb(36, 36, 36);
+  background-color: var(--background-color-1);
   /* outline: 1px solid rgba(100, 100, 100, 0.2); */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -588,7 +594,7 @@ body {
 .best-project-page-container {
 }
 .best-projects-page-section {
-  padding-top: 56px;
+  padding-top: 144px;
   padding-bottom: 64px;
 }
 
@@ -606,7 +612,7 @@ body {
 
 /* ======================PORTFOLIO.HTML========== */
 .portfolio-page-section {
-  padding-top: 56px;
+  padding-top: 144px;
   padding-bottom: 64px;
   background-color: var(--my-color-2);
 }
@@ -699,11 +705,12 @@ body {
   font-size: 24px;
   /* color: rgba(242, 242, 242, 0.8); */
   border: 2px solid rgba(230, 230, 230, 0.5);
-  background-color: rgba(98, 117, 138, 0.7);
+  background-color: rgba(98, 117, 138, 0.9);
   width: 50px;
   height: 50px;
   border-radius: 25px;
   display: none;
+  z-index: 2;
   transition: background-color var(--my-transition-duration)
       var(--my-transition-timing-function),
     border var(--my-transition-duration) var(--my-transition-timing-function);
@@ -722,7 +729,7 @@ body {
 /* меняем прозрачность при наведении мышкой */
 .go-top:hover {
   border: 2px solid rgba(230, 230, 230, 0.8);
-  background-color: rgba(98, 117, 138, 0.5);
+  background-color: rgba(98, 117, 138, 0.7);
 }
 
 /* модификатор для отображения кнопки */

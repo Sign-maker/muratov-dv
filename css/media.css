@@ -109,6 +109,10 @@
     align-items: flex-end;
     margin-bottom: 48px;
   }
+  .hero-img {
+    aspect-ratio: 306 / 306;
+    min-width: 306px;
+  }
   .hero-title {
     font-size: 36px;
     margin-bottom: 16px;
@@ -357,13 +361,17 @@
   /* ====================HERO========================== */
 
   .hero-section {
+    padding-top: 88px;
   }
 
   .hero-container {
     padding-left: 50px;
     padding-right: 50px;
   }
-
+  .hero-img {
+    aspect-ratio: 480 / 480;
+    min-width: 480px;
+  }
   .hero-title {
     font-size: 60px;
     margin-bottom: 28px;
@@ -450,6 +458,7 @@
 
   /*=========== BEST-PROJECTS.HTML========== */
   /* ===================PORTFOLIO.HTML========== */
+
   .portfolio-list {
     gap: 24px;
   }

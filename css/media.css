@@ -220,6 +220,24 @@
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 1199px) and (orientation: landscape) {
+  .header-nav-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .header-nav-item {
+    margin-bottom: 0;
+  }
+  .header-addres-list {
+    display: flex;
+    gap: 24px;
+
+    justify-content: center;
+  }
+}
 
 @media screen and (max-width: 1199px) {
   /* ====================HEADER========================== */

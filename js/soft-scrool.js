@@ -15,48 +15,60 @@
 //   });
 // });
 
-// Переход с другой страницы
+// // Переход с другой страницы
+// document.addEventListener("DOMContentLoaded", onLoad);
+// // onLoad();
+// function onLoad(event) {
+//   event.preventDefault;
+//   const myHash = document.location.hash.substring(1);
+//   document.location.hash = "";
+//   if (myHash) {
+//     console.log(myHash);
+//     scroll(myHash);
+//   }
+// }
+
+// // Переход на текущей странице
+
+// const linksWithAnchors = document.querySelectorAll('a[href*="#"]');
+// const navLinks = document.querySelectorAll(".nav-link");
+
+// linksWithAnchors.forEach(function (linkWithAnchor) {
+//   linkWithAnchor.addEventListener("click", onClick);
+// });
+
+// function onClick(event) {
+//   // console.log(event.currentTarget);
+//   event.preventDefault();
+//   const currentAnchor = event.currentTarget.getAttribute("href").substring(1);
+
+//   scroll(currentAnchor);
+// }
+
+// function scroll(currentAnchor) {
+//   const currentElement = document.getElementById(currentAnchor);
+//   // console.log(currentElement);
+//   markActiveLink(currentAnchor);
+
+//   const positionFromTop = currentElement.getBoundingClientRect().top;
+//   const offset = document.querySelector("header").offsetHeight;
+
+//   window.scrollBy({
+//     top: positionFromTop - offset,
+//     behavior: "smooth",
+//   });
+// }
+
+// // Переход с другой страницы
 document.addEventListener("DOMContentLoaded", onLoad);
-// onLoad();
+
 function onLoad(event) {
-  event.preventDefault;
-  const myHash = document.location.hash.substring(1);
-  document.location.hash = "";
+  // console.log(event);
+  const myHash = event.srcElement.location.hash.substring(1);
   if (myHash) {
-    console.log(myHash);
-    scroll(myHash);
+    // console.log(myHash);
+    markActiveLink(myHash);
   }
-}
-
-// Переход на текущей странице
-
-const linksWithAnchors = document.querySelectorAll('a[href*="#"]');
-const navLinks = document.querySelectorAll(".nav-link");
-
-linksWithAnchors.forEach(function (linkWithAnchor) {
-  linkWithAnchor.addEventListener("click", onClick);
-});
-
-function onClick(event) {
-  // console.log(event.currentTarget);
-  event.preventDefault();
-  const currentAnchor = event.currentTarget.getAttribute("href").substring(1);
-
-  scroll(currentAnchor);
-}
-
-function scroll(currentAnchor) {
-  const currentElement = document.getElementById(currentAnchor);
-  // console.log(currentElement);
-  markActiveLink(currentAnchor);
-
-  const positionFromTop = currentElement.getBoundingClientRect().top;
-  const offset = document.querySelector("header").offsetHeight;
-
-  window.scrollBy({
-    top: positionFromTop - offset,
-    behavior: "smooth",
-  });
 }
 
 function markActiveLink(currentAnchor) {
@@ -66,3 +78,16 @@ function markActiveLink(currentAnchor) {
     } else navLink.classList.remove("active-page");
   });
 }
+
+const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
+// console.log(navLinks);
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", (event) => {
+    // console.log(navLink);
+    const myHash = event.currentTarget.hash.substring(1);
+    // console.log(myHash);
+    if (myHash) {
+      markActiveLink(myHash);
+    }
+  });
+});

@@ -5,16 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (menu && menuBtn) {
     menuBtn.addEventListener("click", function () {
+      body.classList.toggle("lock"); // Toggle body scrolling
       menu.classList.toggle("active"); // Toggle menu visibility
       menuBtn.classList.toggle("active-icon"); // Toggle menu icon state
-      // body.classList.toggle("lock"); // Toggle body scrolling
     });
   }
   menu.querySelectorAll(".menu-link").forEach((link) => {
     link.addEventListener("click", function () {
+      body.classList.remove("lock"); // Toggle body scrolling
       menu.classList.remove("active"); // Toggle menu visibility
       menuBtn.classList.remove("active-icon"); // Toggle menu icon state
-      // body.classList.remove("lock"); // Toggle body scrolling
     });
   });
 });

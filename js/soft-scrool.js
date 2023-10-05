@@ -1,4 +1,21 @@
 /*========================SoftScrool===================*/
+// window.addEventListener("hashchange", onHashChange);
+
+// function onHashChange(event) {
+//   console.log(event);
+//   event.preventDefault();
+//   const myHash = event.currentTarget.location.hash.substring(1);
+//   console.log(myHash, typeof myHash);
+//   // scrollToHash(myHash);
+// }
+
+// function scrollToHash(myHash) {
+//   console.log(myHash);
+//   document.getElementById(myHash).scrollIntoView({
+//     behavior: "smooth",
+//     block: "start",
+//   });
+// }
 
 // const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -60,34 +77,34 @@
 // }
 
 // // Переход с другой страницы
-document.addEventListener("DOMContentLoaded", onLoad);
+// document.addEventListener("DOMContentLoaded", onLoad);
 
-function onLoad(event) {
-  // console.log(event);
-  const myHash = event.srcElement.location.hash.substring(1);
-  if (myHash) {
-    // console.log(myHash);
-    markActiveLink(myHash);
-  }
-}
+// function onLoad(event) {
+//   // console.log(event);
+//   const myHash = event.srcElement.location.hash.substring(1);
+//   if (myHash) {
+//     // console.log(myHash);
+//     markActiveLink(myHash);
+//   }
+// }
 
-function markActiveLink(currentAnchor) {
-  navLinks.forEach((navLink) => {
-    if (currentAnchor === navLink.getAttribute("href").substring(1)) {
-      navLink.classList.add("active-page");
-    } else navLink.classList.remove("active-page");
-  });
-}
+// function markActiveLink(currentAnchor) {
+//   navLinks.forEach((navLink) => {
+//     if (currentAnchor === navLink.getAttribute("href").substring(1)) {
+//       navLink.classList.add("active-page");
+//     } else navLink.classList.remove("active-page");
+//   });
+// }
 
-const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
-// console.log(navLinks);
-navLinks.forEach((navLink) => {
-  navLink.addEventListener("click", (event) => {
-    // console.log(navLink);
-    const myHash = event.currentTarget.hash.substring(1);
-    // console.log(myHash);
-    if (myHash) {
-      markActiveLink(myHash);
-    }
-  });
-});
+// const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
+// // console.log(navLinks);
+// navLinks.forEach((navLink) => {
+//   navLink.addEventListener("click", (event) => {
+//     // console.log(navLink);
+//     const myHash = event.currentTarget.hash.substring(1);
+//     // console.log(myHash);
+//     if (myHash) {
+//       markActiveLink(myHash);
+//     }
+//   });
+// });

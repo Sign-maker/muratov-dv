@@ -70,7 +70,7 @@
   --my-transition-delay: 250ms;
 }
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 /* Reset styles */

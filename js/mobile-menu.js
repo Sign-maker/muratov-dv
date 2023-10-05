@@ -17,21 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       menuBtn.classList.remove("active-icon"); // Toggle menu icon state
     });
   });
-
-  const myHash = document.location.hash.substring(1);
-  document.location.hash = "";
-  if (myHash) {
-    // console.log(myHash);
-    scrollToHash(myHash);
-  }
-
-  function scrollToHash(myHash) {
-    // console.log(myHash);
-    document.getElementById(myHash).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
 });
 
 // event.preventDefault(); // Предотвращаем стандартное поведение ссылки

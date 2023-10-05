@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", onLoad);
 // onLoad();
 function onLoad(event) {
   event.preventDefault;
-  const myHash = location.hash.substring(1);
-  location.hash = "";
+  const myHash = document.location.hash.substring(1);
+  document.location.hash = "";
   if (myHash) {
     scroll(myHash);
   }

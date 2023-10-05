@@ -9,28 +9,46 @@
 //   // scrollToHash(myHash);
 // }
 
-// function scrollToHash(myHash) {
-//   // console.log(myHash);
-//   document.getElementById(myHash).scrollIntoView({
-//     behavior: "smooth",
-//     block: "start",
-//   });
-// }
+// const anchors = document.querySelectorAll('a[href*="#"]');
+const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
 
-const anchors = document.querySelectorAll('a[href*="#"]');
-
-anchors.forEach((anchor) => {
+navLinks.forEach((anchor) => {
   anchor.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const blockID = anchor.getAttribute("href").substring(1);
-
-    document.getElementById(blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const myHash = anchor.getAttribute("href").substring(1);
+    markActiveLink(myHash);
+    scrollToHash(myHash);
   });
 });
+
+document.addEventListener("DOMContentLoaded", onLoad);
+
+function onLoad(event) {
+  // console.log(event);
+  const myHash = event.srcElement.location.hash.substring(1);
+  if (myHash) {
+    // console.log(myHash);
+    markActiveLink(myHash);
+    // scrollToHash(myHash);
+  }
+}
+
+function scrollToHash(myHash) {
+  // console.log(myHash);
+  document.getElementById(myHash).scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+function markActiveLink(currentAnchor) {
+  navLinks.forEach((navLink) => {
+    if (currentAnchor === navLink.getAttribute("href").substring(1)) {
+      navLink.classList.add("active-page");
+    } else navLink.classList.remove("active-page");
+  });
+}
 
 // // Переход с другой страницы
 // document.addEventListener("DOMContentLoaded", onLoad);

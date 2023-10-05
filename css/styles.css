@@ -166,7 +166,7 @@ body {
 }
 
 .lock {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 .active-page {
   color: var(--my-color-1);

@@ -329,6 +329,7 @@ body {
 
 /* ====================SOFT-SKILLS========================== */
 .soft-skills-section {
+  scroll-margin-top: 64px;
   padding-top: 64px;
   padding-bottom: 64px;
   background-color: var(--background-color-1);
@@ -413,6 +414,7 @@ body {
 /* ====================HARD-SKILLS========================== */
 
 .hard-skills-section {
+  scroll-margin-top: 64px;
   padding-top: 64px;
   padding-bottom: 96px;
   background-color: var(--background-color-2);

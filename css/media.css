@@ -407,14 +407,18 @@
   }
 
   /* ====================SOFT-SKILLS========================== */
-
+  .soft-skills-section {
+    scroll-margin-top: 88px;
+  }
   .skills-title {
     font-size: 45px;
     margin-bottom: 40px;
   }
 
   /* ====================HARD-SKILLS========================== */
-
+  .hard-skills-section {
+    scroll-margin-top: 88px;
+  }
   .hard-skills-item {
     flex-basis: calc((100% - 48px) / 3);
   }

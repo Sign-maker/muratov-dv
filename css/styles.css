@@ -520,6 +520,9 @@ body {
   #best-projects-page-carousel-6,
   #best-projects-page-carousel-7,
   #best-projects-page-carousel-8,
+  #best-projects-page-carousel-9,
+  #best-projects-page-carousel-10,
+  #best-projects-page-carousel-11,
   #portfolio-carousel {
     height: 300px;
   }
@@ -534,6 +537,9 @@ body {
   #best-projects-page-carousel-6,
   #best-projects-page-carousel-7,
   #best-projects-page-carousel-8,
+  #best-projects-page-carousel-9,
+  #best-projects-page-carousel-10,
+  #best-projects-page-carousel-11,
   #portfolio-carousel {
     height: 375px;
     --f-carousel-slide-width: calc(100% / 2.3);
@@ -551,6 +557,9 @@ body {
   #best-projects-page-carousel-6,
   #best-projects-page-carousel-7,
   #best-projects-page-carousel-8,
+  #best-projects-page-carousel-9,
+  #best-projects-page-carousel-10,
+  #best-projects-page-carousel-11,
   #portfolio-carousel {
     height: 450px;
 
@@ -567,6 +576,9 @@ body {
 #best-projects-page-carousel-6 .f-carousel__viewport,
 #best-projects-page-carousel-7 .f-carousel__viewport,
 #best-projects-page-carousel-8 .f-carousel__viewport,
+#best-projects-page-carousel-9 .f-carousel__viewport,
+#best-projects-page-carousel-10 .f-carousel__viewport,
+#best-projects-page-carousel-11 .f-carousel__viewport,
 #portfolio-carousel .f-carousel__viewport {
   /* overflow: auto; */
   padding-top: 5px;
@@ -581,6 +593,9 @@ body {
 #best-projects-page-carousel-6 .f-carousel__slide,
 #best-projects-page-carousel-7 .f-carousel__slide,
 #best-projects-page-carousel-8 .f-carousel__slide,
+#best-projects-page-carousel-9 .f-carousel__slide,
+#best-projects-page-carousel-10 .f-carousel__slide,
+#best-projects-page-carousel-11 .f-carousel__slide,
 #portfolio-carousel .f-carousel__slide {
   /* width: auto; */
   border-radius: 15px;
@@ -600,6 +615,9 @@ body {
 #best-projects-page-carousel-6 .f-carousel__slide img,
 #best-projects-page-carousel-7 .f-carousel__slide img,
 #best-projects-page-carousel-8 .f-carousel__slide img,
+#best-projects-page-carousel-9 .f-carousel__slide img,
+#best-projects-page-carousel-10 .f-carousel__slide img,
+#best-projects-page-carousel-11 .f-carousel__slide img,
 #portfolio-carousel .f-carousel__slide img {
   object-fit: cover;
   width: 100%;
@@ -615,6 +633,9 @@ body {
 #best-projects-page-carousel-6 .f-button svg,
 #best-projects-page-carousel-7 .f-button svg,
 #best-projects-page-carousel-8 .f-button svg,
+#best-projects-page-carousel-9 .f-button svg,
+#best-projects-page-carousel-10 .f-button svg,
+#best-projects-page-carousel-11 .f-button svg,
 #portfolio-carousel .f-button svg {
   stroke: white;
 }

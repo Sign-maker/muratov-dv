@@ -1,10 +1,29 @@
-@media screen and (max-width: 374px) {
+
+@media screen and (max-width: 329px) {
   /* ====================HERO========================== */
 
   /* ====================SOFT-SKILLS========================== */
   .skills-title {
+    font-size: 22px;
+  }
+  .address-link {
+    font-size: 16px;
+   
+  }
+  
+}
+
+@media screen and (min-width:330px) and (max-width: 374px){
+  .skills-title {
     font-size: 30px;
   }
+  
+}
+@media screen and (max-width: 374px) {
+  /* ====================HERO========================== */
+
+  /* ====================SOFT-SKILLS========================== */
+  
   .soft-skill-name {
     font-size: 16px;
   }

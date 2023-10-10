@@ -570,6 +570,26 @@ body {
     --f-carousel-spacing: 24px;
   }
 }
+@media (min-width: 1500px) {
+  #best-projects-carousel,
+  #best-projects-page-carousel-1,
+  #best-projects-page-carousel-2,
+  #best-projects-page-carousel-3,
+  #best-projects-page-carousel-4,
+  #best-projects-page-carousel-5,
+  #best-projects-page-carousel-6,
+  #best-projects-page-carousel-7,
+  #best-projects-page-carousel-8,
+  #best-projects-page-carousel-9,
+  #best-projects-page-carousel-10,
+  #best-projects-page-carousel-11,
+  #portfolio-carousel {
+    height: 450px;
+
+    --f-carousel-slide-width: calc(100% / 4.4);
+    --f-carousel-spacing: 24px;
+  }
+}
 #best-projects-carousel .f-carousel__viewport,
 #best-projects-page-carousel-1 .f-carousel__viewport,
 #best-projects-page-carousel-2 .f-carousel__viewport,

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/media.css" />
-    <!-- <link rel="stylesheet" href="./css/fancybox.css" /> -->
+    <link rel="stylesheet" href="./css/fancybox.css" />
     <!-- <link rel="stylesheet" href="./css/carousel.css" /> -->
     <!-- <link rel="stylesheet" href="./css/carousel.thumbs.css" /> -->
   </head>
@@ -108,39 +108,55 @@
           <h2 class="question skills-question portfolio-page-question">
             Portfolio
           </h2>
-          <ul class="portfolio-filter-list" id="myBtnContainer">
+          <ul class="portfolio-filter-list" id="filterBtnContainer">
             <li class="portfolio-filter-item">
               <button
                 type="button"
                 class="btn filter-btn active"
-                data-product="all"
+                data-category="all"
               >
                 All
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button type="button" class="btn filter-btn" data-product="prod1">
+              <button
+                type="button"
+                class="btn filter-btn"
+                data-category="prod1"
+              >
                 Prod1
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button type="button" class="btn filter-btn" data-product="prod2">
+              <button
+                type="button"
+                class="btn filter-btn"
+                data-category="prod2"
+              >
                 Prod2
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button type="button" class="btn filter-btn" data-product="prod3">
+              <button
+                type="button"
+                class="btn filter-btn"
+                data-category="prod3"
+              >
                 Prod3
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button type="button" class="btn filter-btn" data-product="prod4">
+              <button
+                type="button"
+                class="btn filter-btn"
+                data-category="prod4"
+              >
                 Prod4
               </button>
             </li>
           </ul>
-          <ul class="portfolio-list">
-            <li class="portfolio-item prod1">
+          <ul class="portfolio-list" id="portfolio-gallery">
+            <!-- <li class="portfolio-item prod1">
               <div class="portfolio-image proportion-type2">
                 <a class="porfolio-page-img-link">
                   <picture>
@@ -251,7 +267,7 @@
                   </picture>
                 </a>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -326,8 +342,24 @@
       </div>
     </div>
     <script type="module" src="./js/mobile-menu.js"></script>
-    <script type="module" src="./js/filter-gallery-new.js"></script>
+    <script type="module" src="./js/portfolio.js"></script>
     <!-- =============GO top btn=============== -->
     <script type="module" src="./js/go-top-btn.js"></script>
+    <script type="module">
+      import { Fancybox } from "./js/fancybox.esm.js";
+      Fancybox.bind("#portfolio-gallery a", {
+        groupAll: true,
+        Toolbar: {
+          display: {
+            left: ["infobar"],
+            middle: [],
+            right: ["fullscreen", "iterateZoom", "close"],
+          },
+        },
+        Thumbs: {
+          type: false,
+        },
+      });
+    </script>
   </body>
 </html>

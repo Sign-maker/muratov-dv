@@ -177,21 +177,6 @@ function bindFancybox(data) {
   Fancybox.bind(data, options);
 }
 
-// Fancybox.bind("#portfolio-gallery a", {
-//   groupAll: true,
-//   Toolbar: {
-//     display: {
-//       left: ["infobar"],
-//       middle: [],
-//       right: ["fullscreen", "iterateZoom", "close"],
-//     },
-//   },
-//   Thumbs: {
-//     type: false,
-//   },
-// });
-// console.log(myFancyBox);
-
 // admin function=====================================
 
 // const galleryArr = [];

@@ -1626,9 +1626,9 @@
       //   },
       //   // Your custom options
       // });
-
-      Fancybox.bind("#hard-skills-projects-gallary a", {
+      const optionsFB = {
         groupAll: true,
+        compact: false,
         Toolbar: {
           display: {
             left: ["infobar"],
@@ -1639,79 +1639,19 @@
         Thumbs: {
           type: false,
         },
-      });
+      };
 
-      Fancybox.bind("#hard-skills-equipment-gallary a", {
-        groupAll: true,
-        Toolbar: {
-          display: {
-            left: ["infobar"],
-            middle: [],
-            right: ["fullscreen", "iterateZoom", "close"],
-          },
-        },
-        Thumbs: {
-          type: false,
-        },
-      });
+      Fancybox.bind("#hard-skills-projects-gallary a", optionsFB);
 
-      Fancybox.bind("#hard-skills-electro-gallary a", {
-        groupAll: true,
-        Toolbar: {
-          display: {
-            left: ["infobar"],
-            middle: [],
-            right: ["fullscreen", "iterateZoom", "close"],
-          },
-        },
-        Thumbs: {
-          type: false,
-        },
-      });
+      Fancybox.bind("#hard-skills-equipment-gallary a", optionsFB);
 
-      Fancybox.bind("#hard-skills-color-gallary a", {
-        groupAll: true,
-        Toolbar: {
-          display: {
-            left: ["infobar"],
-            middle: [],
-            right: ["fullscreen", "iterateZoom", "close"],
-          },
-        },
-        Thumbs: {
-          type: false,
-        },
-      });
+      Fancybox.bind("#hard-skills-electro-gallary a", optionsFB);
 
-      Fancybox.bind("#best-projects-gallery a", {
-        groupAll: true,
-        Toolbar: {
-          display: {
-            left: ["infobar"],
-            middle: [],
-            right: ["fullscreen", "iterateZoom", "close"],
-          },
-        },
+      Fancybox.bind("#hard-skills-color-gallary a", optionsFB);
 
-        Thumbs: {
-          type: false,
-        },
-      });
+      Fancybox.bind("#best-projects-gallery a", optionsFB);
 
-      Fancybox.bind("#portfolio-gallery a", {
-        groupAll: true,
-        Toolbar: {
-          display: {
-            left: ["infobar"],
-            middle: [],
-            right: ["fullscreen", "iterateZoom", "close"],
-          },
-        },
-
-        Thumbs: {
-          type: false,
-        },
-      });
+      Fancybox.bind("#portfolio-gallery a", optionsFB);
     </script>
   </body>
 </html>

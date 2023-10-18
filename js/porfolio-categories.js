@@ -12,14 +12,14 @@
 // ];
 
 export const categories = [
-  { categoryId: "0", categoryName: "Wszystkie" },
+  { categoryId: "0", categoryName: "Wszystko" },
   { categoryId: "1", categoryName: "Elewacje" },
-  { categoryId: "2", categoryName: "Sklepy, buira" },
+  { categoryId: "2", categoryName: "Sklepy, biura" },
   { categoryId: "3", categoryName: "Litery, szyldy" },
-  { categoryId: "4", categoryName: "Dekoracja wnętrz" },
+  { categoryId: "4", categoryName: "Dekor wnętrz" },
   { categoryId: "5", categoryName: "Witryny" },
   { categoryId: "6", categoryName: "Pilony" },
-  { categoryId: "7", categoryName: "Pojazdy" },
+  { categoryId: "7", categoryName: "Auta" },
   { categoryId: "8", categoryName: "Tablice" },
   { categoryId: "9", categoryName: "Znaki" },
 ];

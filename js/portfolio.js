@@ -1,5 +1,6 @@
 import { portfolioGalleryItems, paths } from "./portfolio-items.js";
 import { categories } from "./porfolio-categories.js";
+import { Fancybox } from "./fancybox.esm.js";
 
 const {
   jpegBigPath,
@@ -25,7 +26,7 @@ let currentCategoryId =
 filterButtonsMarkup(categories);
 changeBtnState(currentCategoryId, ACTIVE_STATE);
 galleryMarkup(portfolioGalleryItems);
-const galeryItemsRef = document.querySelectorAll(
+const galleryItemsRef = document.querySelectorAll(
   ".portfolio-list .portfolio-item "
 );
 showGalleryForCategory(currentCategoryId);
@@ -118,20 +119,30 @@ function changeBtnState(categoryId, state) {
 }
 
 function showGalleryForCategory(categoryId) {
-  galeryItemsRef.forEach(({ dataset, classList }) => {
+  galleryItemsRef.forEach((galleryItem) => {
+    const galleryLinkRef = galleryItem.querySelector("a");
+    const { dataset, classList } = galleryItem;
     if (categoryId === ALL_CATEGORY_ID) {
       classList.add("show");
+      galleryLinkRef.setAttribute("data-fancybox", "gallery");
     } else {
       if (dataset.categoryId === categoryId) {
         classList.add("show");
-      } else classList.remove("show");
+        galleryLinkRef.setAttribute("data-fancybox", "gallery");
+      } else {
+        classList.remove("show");
+        galleryLinkRef.removeAttribute("data-fancybox");
+      }
     }
   });
+  bindFancybox(`[data-fancybox="gallery"]`);
 }
 
 function onBtnClick({ target }) {
   if (target.nodeName !== "BUTTON") {
-    return;
+    if (target.closest("button")) {
+      target = target.closest("button");
+    } else return;
   }
   const nextCategoryId = target.dataset.categoryId;
 
@@ -146,6 +157,40 @@ function onBtnClick({ target }) {
 
   showGalleryForCategory(currentCategoryId);
 }
+
+function bindFancybox(data) {
+  Fancybox.destroy();
+  const options = {
+    groupAll: true,
+    compact: false,
+    Toolbar: {
+      display: {
+        left: ["infobar"],
+        middle: [],
+        right: ["fullscreen", "iterateZoom", "close"],
+      },
+    },
+    Thumbs: {
+      type: false,
+    },
+  };
+  Fancybox.bind(data, options);
+}
+
+// Fancybox.bind("#portfolio-gallery a", {
+//   groupAll: true,
+//   Toolbar: {
+//     display: {
+//       left: ["infobar"],
+//       middle: [],
+//       right: ["fullscreen", "iterateZoom", "close"],
+//     },
+//   },
+//   Thumbs: {
+//     type: false,
+//   },
+// });
+// console.log(myFancyBox);
 
 // admin function=====================================
 

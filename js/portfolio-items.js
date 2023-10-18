@@ -18,6 +18,10 @@ export const portfolioGalleryItems = [
     categoryId: "1",
   },
   {
+    nameNumber: "1259",
+    categoryId: "3",
+  },
+  {
     nameNumber: "1061",
     categoryId: "2",
   },
@@ -959,6 +963,7 @@ export const portfolioGalleryItems = [
     nameNumber: "1258",
     categoryId: "9",
   },
+
   {
     nameNumber: "1001",
     categoryId: "1",

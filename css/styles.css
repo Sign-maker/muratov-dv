@@ -675,11 +675,9 @@ body {
 .best-projects-page-item:nth-child(2n + 1) {
   background-color: var(--background-color-2);
 }
+
 .best-projects-page-item {
-  padding-top: 32px;
-}
-.best-projects-page-item {
-  padding-top: 32px;
+  padding-top: 48px;
   padding-bottom: 96px;
 }
 

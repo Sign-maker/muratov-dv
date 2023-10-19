@@ -1,6 +1,8 @@
 import { portfolioGalleryItems, paths } from "./portfolio-items.js";
 import { categories } from "./porfolio-categories.js";
-import { Fancybox } from "./fancybox.esm.js";
+import { destroyFancybox, bindFancybox } from "./fancybox-functions.js";
+import { mobileMenuHandler } from "./mobile-menu.js";
+import { goTopBtnHandler } from "./go-top-btn.js";
 
 const {
   jpegBigPath,
@@ -31,6 +33,8 @@ const galleryItemsRef = document.querySelectorAll(
 );
 showGalleryForCategory(currentCategoryId);
 buttonsListRef.addEventListener("click", onBtnClick);
+mobileMenuHandler();
+goTopBtnHandler();
 
 function filterButtonsMarkup(categories) {
   const markup = categories
@@ -69,15 +73,7 @@ function galleryMarkup(galleryItems) {
                           }"
                           type="image/webp"
                         />
-                        <source
-                          srcset="${
-                            jpegThumbPath +
-                            namePrefix +
-                            item.nameNumber +
-                            jpegThumbSufix
-                          }"
-                          type="image/jpeg"
-                        />
+                      
                     <img
                       loading="lazy"
                       src="${
@@ -135,6 +131,7 @@ function showGalleryForCategory(categoryId) {
       }
     }
   });
+  destroyFancybox();
   bindFancybox(`[data-fancybox="gallery"]`);
 }
 
@@ -156,25 +153,6 @@ function onBtnClick({ target }) {
   localStorage.setItem(CURRENT_PORTFOLIO_CATEGORY_ID, currentCategoryId);
 
   showGalleryForCategory(currentCategoryId);
-}
-
-function bindFancybox(data) {
-  Fancybox.destroy();
-  const options = {
-    groupAll: true,
-    compact: false,
-    Toolbar: {
-      display: {
-        left: ["infobar"],
-        middle: [],
-        right: ["fullscreen", "iterateZoom", "close"],
-      },
-    },
-    Thumbs: {
-      type: false,
-    },
-  };
-  Fancybox.bind(data, options);
 }
 
 // admin function=====================================

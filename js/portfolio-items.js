@@ -14,13 +14,14 @@ export const portfolioGalleryItems = [
     categoryId: "1",
   },
   {
+    nameNumber: "1260",
+    categoryId: "3",
+  },
+  {
     nameNumber: "1182",
     categoryId: "1",
   },
-  {
-    nameNumber: "1259",
-    categoryId: "3",
-  },
+
   {
     nameNumber: "1061",
     categoryId: "2",
@@ -566,10 +567,10 @@ export const portfolioGalleryItems = [
     nameNumber: "1152",
     categoryId: "4",
   },
-  {
-    nameNumber: "1153",
-    categoryId: "8",
-  },
+  // {
+  //   nameNumber: "1153",
+  //   categoryId: "8",
+  // },
   {
     nameNumber: "1013",
     categoryId: "8",
@@ -962,6 +963,10 @@ export const portfolioGalleryItems = [
   {
     nameNumber: "1258",
     categoryId: "9",
+  },
+  {
+    nameNumber: "1259",
+    categoryId: "3",
   },
 
   {

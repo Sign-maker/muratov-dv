@@ -351,6 +351,22 @@
 }
 
 @media screen and (min-width: 1200px) {
+  /* ====================COMMON========================== */
+  .active-link {
+    position: relative;
+  }
+  .active-link::after {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 70%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--my-color-1);
+  }
+
   /* ====================HEADER========================== */
   .header-container {
     padding-left: 50px;
@@ -452,7 +468,7 @@
 
   /* ====================HARD-SKILLS========================== */
   .hard-skills-section {
-    scroll-margin-top: 88px;
+    scroll-margin-top: 87px;
   }
   .hard-skills-item {
     flex-basis: calc((100% - 48px) / 3);

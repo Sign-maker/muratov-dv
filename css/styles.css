@@ -168,9 +168,6 @@ body {
 .lock {
   overflow-y: hidden;
 }
-.active-page {
-  color: var(--my-color-1);
-}
 
 /* ====================HEADER========================== */
 .header {
@@ -210,13 +207,23 @@ body {
 .header-nav-item {
 }
 .nav-link {
+  /* display: block; */
   font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
   transition: opacity var(--my-transition-duration)
-    var(--my-transition-timing-function);
+      var(--my-transition-timing-function),
+    color var(--my-transition-duration) var(--my-transition-timing-function);
+}
+.active-link {
+  color: var(--my-color-1);
+  font-weight: 700;
 }
 .header-nav-link {
+}
+.header-nav-link.active-link {
+}
+.header-nav-link::after {
 }
 .addres {
 }

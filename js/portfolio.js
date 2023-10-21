@@ -138,7 +138,7 @@ function showGalleryForCategory(categoryId) {
 function onBtnClick({ target }) {
   if (target.nodeName !== "BUTTON") {
     if (target.closest("button")) {
-      target = target.closest("button");
+      target = target.closest("button"); //if translator
     } else return;
   }
   const nextCategoryId = target.dataset.categoryId;

@@ -1,9 +1,11 @@
+import debounce from "./debounce.js";
+
 export function goTopBtnHandler() {
   // считываем кнопку
   const goTopBtn = document.querySelector(".go-top");
 
   // обработчик на скролл окна
-  window.addEventListener("scroll", trackScroll);
+  window.addEventListener("scroll", debounce(100, trackScroll));
   // обработчик на нажатии
   goTopBtn.addEventListener("click", goTop);
 

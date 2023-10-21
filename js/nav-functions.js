@@ -1,130 +1,89 @@
-/*========================SoftScrool===================*/
-// window.addEventListener("hashchange", onHashChange);
+import debounce from "./debounce.js";
 
-// function onHashChange(event) {
-//   console.log(event);
-//   event.preventDefault();
-//   const myHash = event.currentTarget.location.hash.substring(1);
-//   console.log(myHash, typeof myHash);
-//   // scrollToHash(myHash);
-// }
-
-// const anchors = document.querySelectorAll('a[href*="#"]');
 export function navHandler() {
-  const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
-
-  navLinks.forEach((anchor) => {
-    anchor.addEventListener("click", (event) => {
-      event.preventDefault();
-
-      const myHash = anchor.getAttribute("href").substring(1);
-      markActiveLink(myHash);
-      scrollToHash(myHash);
-    });
-  });
-
   document.addEventListener("DOMContentLoaded", onLoad);
 
-  function onLoad(event) {
-    // console.log(event);
-    const myHash = event.srcElement.location.hash.substring(1);
-    if (myHash) {
-      // console.log(myHash);
-      markActiveLink(myHash);
-      // scrollToHash(myHash);
+  function onLoad() {
+    const ACTIVE_LINK = "active-link";
+    const navLinksWithHashRef = document.querySelectorAll(
+      '.nav-link[href*="#"]'
+    );
+    const targetsRef = document.querySelectorAll("section[data-section-id]");
+    const elForCompensationRef = document.querySelector("header");
+    const menuLinksRef = document.querySelectorAll("[data-nav-id]");
+
+    navLinksWithHashRef.forEach((anchor) =>
+      anchor.addEventListener("click", onAnchorClick)
+    );
+
+    let currentActiveLinkId = getActiveTargetElId(targetsRef);
+    markActiveLinkById(menuLinksRef, currentActiveLinkId);
+
+    window.addEventListener("scroll", debounce(100, scrollHandler));
+
+    function onAnchorClick(event) {
+      event.preventDefault();
+      const myHash = event.currentTarget.getAttribute("href").substring(1);
+      // markActiveLinkByHash(myHash);
+      scrollToHash(myHash);
+    }
+
+    function getActiveTargetElId(targetsRef) {
+      let activeTargetElId = null;
+
+      targetsRef.forEach((targetEl) => {
+        if (isTargetElInViewport(targetEl, elForCompensationRef)) {
+          activeTargetElId = targetEl.dataset.sectionId;
+        }
+      });
+      return activeTargetElId;
+    }
+
+    function markActiveLinkById(linksRef, linkId) {
+      linksRef.forEach((link) => {
+        if (link.dataset.navId === linkId) {
+          link.classList.add(ACTIVE_LINK);
+        } else link.classList.remove(ACTIVE_LINK);
+      });
+    }
+
+    function isTargetElInViewport(targetEl, elForCompensation) {
+      if (!targetEl) {
+        return;
+      }
+      const compensation = elForCompensation
+        ? elForCompensation.clientHeight
+        : 0;
+      const scrollDistance = window.scrollY;
+      const offsetTop = targetEl.offsetTop;
+      const targetHeight = targetEl.clientHeight;
+      const currentTargetTopPosRelToWindow =
+        offsetTop - scrollDistance - compensation - 4; //какие-то бока с scrollY
+
+      const result =
+        currentTargetTopPosRelToWindow <= 0 &&
+        currentTargetTopPosRelToWindow >= targetHeight * -1;
+      return result;
+    }
+
+    function scrollHandler() {
+      currentActiveLinkId = getActiveTargetElId(targetsRef);
+      markActiveLinkById(menuLinksRef, currentActiveLinkId);
+    }
+
+    function scrollToHash(myHash) {
+      document.getElementById(myHash).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    function markActiveLinkByHash(currentAnchor) {
+      navLinksWithHashRef.forEach((navLink) => {
+        if (currentAnchor === navLink.getAttribute("href").substring(1)) {
+          navLink.classList.add(ACTIVE_LINK);
+        } else navLink.classList.remove(ACTIVE_LINK);
+      });
     }
   }
-
-  function scrollToHash(myHash) {
-    // console.log(myHash);
-    document.getElementById(myHash).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-
-  function markActiveLink(currentAnchor) {
-    navLinks.forEach((navLink) => {
-      if (currentAnchor === navLink.getAttribute("href").substring(1)) {
-        navLink.classList.add("active-page");
-      } else navLink.classList.remove("active-page");
-    });
-  }
 }
-
-// // Переход с другой страницы
-// document.addEventListener("DOMContentLoaded", onLoad);
-// // onLoad();
-// function onLoad(event) {
-//   // event.preventDefault;
-//   const myHash = document.location.hash.substring(1);
-//   document.location.hash = "";
-//   if (myHash) {
-//     // console.log(myHash);
-//     scrollToHash(myHash);
-//   }
-// }
-
-// // Переход на текущей странице
-
-// const linksWithAnchors = document.querySelectorAll('a[href*="#"]');
-// const navLinks = document.querySelectorAll(".nav-link");
-
-// linksWithAnchors.forEach(function (linkWithAnchor) {
-//   linkWithAnchor.addEventListener("click", onClick);
-// });
-
-// function onClick(event) {
-//   // console.log(event.currentTarget);
-//   event.preventDefault();
-//   const currentAnchor = event.currentTarget.getAttribute("href").substring(1);
-
-//   scroll(currentAnchor);
-// }
-
-// function scroll(currentAnchor) {
-//   const currentElement = document.getElementById(currentAnchor);
-//   // console.log(currentElement);
-//   markActiveLink(currentAnchor);
-
-//   const positionFromTop = currentElement.getBoundingClientRect().top;
-//   const offset = document.querySelector("header").offsetHeight;
-
-//   window.scrollBy({
-//     top: positionFromTop - offset,
-//     behavior: "smooth",
-//   });
-// }
-
-// // Переход с другой страницы
-// document.addEventListener("DOMContentLoaded", onLoad);
-
-// function onLoad(event) {
-//   // console.log(event);
-//   const myHash = event.srcElement.location.hash.substring(1);
-//   if (myHash) {
-//     // console.log(myHash);
-//     markActiveLink(myHash);
-//   }
-// }
-
-// function markActiveLink(currentAnchor) {
-//   navLinks.forEach((navLink) => {
-//     if (currentAnchor === navLink.getAttribute("href").substring(1)) {
-//       navLink.classList.add("active-page");
-//     } else navLink.classList.remove("active-page");
-//   });
-// }
-
-// const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
-// // console.log(navLinks);
-// navLinks.forEach((navLink) => {
-//   navLink.addEventListener("click", (event) => {
-//     // console.log(navLink);
-//     const myHash = event.currentTarget.hash.substring(1);
-//     // console.log(myHash);
-//     if (myHash) {
-//       markActiveLink(myHash);
-//     }
-//   });
-// });

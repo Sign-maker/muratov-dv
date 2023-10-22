@@ -49,7 +49,8 @@ export function makeCarousel(container) {
       },
     },
   };
-  new Carousel(container, options);
+  const a = new Carousel(container, options);
+  console.log(a);
   // const options = {
   //   infinite: false,
   //   Dots: true,

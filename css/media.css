@@ -163,6 +163,19 @@
     font-size: 18px;
     text-align: center;
   }
+  .hero-soft-skills-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 8px;
+  }
+  .hero-soft-skils-item p {
+    font-size: 18px;
+  }
+  .hero-soft-skils-item p span {
+    font-size: 20px;
+  }
 
   /* ====================SOFT-SKILLS========================== */
   .skills-question {
@@ -456,7 +469,15 @@
   .hero-wishes {
     font-size: 22px;
   }
-
+  .hero-soft-skills-list {
+    column-gap: 50px;
+  }
+  .hero-soft-skils-item p {
+    font-size: 22px;
+  }
+  .hero-soft-skils-item p span {
+    font-size: 24px;
+  }
   /* ====================SOFT-SKILLS========================== */
   .soft-skills-section {
     scroll-margin-top: 88px;

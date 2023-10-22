@@ -105,11 +105,15 @@ export const portfolioGalleryItems = [
     nameNumber: "1020",
     categoryId: "3",
   },
-
   {
-    nameNumber: "1022",
+    nameNumber: "1071",
     categoryId: "8",
   },
+
+  // {
+  //   nameNumber: "1022",
+  //   categoryId: "8",
+  // },
 
   {
     nameNumber: "1025",
@@ -245,10 +249,7 @@ export const portfolioGalleryItems = [
     nameNumber: "1070",
     categoryId: "3",
   },
-  {
-    nameNumber: "1071",
-    categoryId: "8",
-  },
+
   {
     nameNumber: "1072",
     categoryId: "9",

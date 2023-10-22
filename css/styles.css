@@ -336,18 +336,22 @@ body {
 .hero-soft-skills-list {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 12px;
+}
+.hero-soft-skils-item {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
 }
 .hero-soft-skils-item p {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.23;
 }
-.hero-soft-skils-item p span {
+.hero-soft-skils-item span {
   color: var(--my-color-1);
-  font-size: 18px;
+  font-size: 20px;
   /* display: inline-block; */
-  padding-right: 10px;
 }
 
 /* ====================SOFT-SKILLS========================== */

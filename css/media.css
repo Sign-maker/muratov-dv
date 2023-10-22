@@ -171,10 +171,8 @@
     row-gap: 8px;
   }
   .hero-soft-skils-item p {
-    font-size: 18px;
   }
-  .hero-soft-skils-item p span {
-    font-size: 20px;
+  .hero-soft-skils-item span {
   }
 
   /* ====================SOFT-SKILLS========================== */
@@ -475,7 +473,7 @@
   .hero-soft-skils-item p {
     font-size: 22px;
   }
-  .hero-soft-skils-item p span {
+  .hero-soft-skils-item span {
     font-size: 24px;
   }
   /* ====================SOFT-SKILLS========================== */

@@ -28,7 +28,8 @@ export function mobileMenuHandler() {
       }
     }
 
-    function menuClickHandler({ target }) {
+    function menuClickHandler(event) {
+      const { target } = event;
       if (
         !(
           (
@@ -40,6 +41,13 @@ export function mobileMenuHandler() {
       ) {
         return;
       }
+      event.preventDefault();
+
+      setTimeout(() => {
+        window.location = target.href;
+        // console.log("www");
+      }, 1000);
+
       body.classList.remove("lock");
       menu.classList.remove("active");
       menuBtn.classList.remove("active-icon");

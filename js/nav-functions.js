@@ -12,9 +12,9 @@ export function navHandler() {
     const elForCompensationRef = document.querySelector("header");
     const menuLinksRef = document.querySelectorAll("[data-nav-id]");
 
-    navLinksWithHashRef.forEach((anchor) =>
-      anchor.addEventListener("click", onAnchorClick)
-    );
+    // navLinksWithHashRef.forEach((anchor) =>
+    //   anchor.addEventListener("click", onAnchorClick)
+    // );
 
     let currentActiveLinkId = getActiveTargetElId(targetsRef);
     markActiveLinkById(menuLinksRef, currentActiveLinkId);

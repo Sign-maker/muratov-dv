@@ -248,24 +248,6 @@
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 1199px) and (orientation: landscape) {
-  .header-nav-list {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 48px;
-  }
-  .header-nav-item {
-    margin-bottom: 0;
-  }
-  .header-addres-list {
-    display: flex;
-    gap: 24px;
-
-    justify-content: center;
-  }
-}
 
 @media screen and (max-width: 1199px) {
   /* ====================HEADER========================== */
@@ -277,13 +259,14 @@
     z-index: 101;
     height: 100vh;
     width: 100%;
-    /* overflow-y: auto; */
+    overflow-y: scroll;
     /* background-color: var(--background-color-1); */
     background-image: linear-gradient(
       90deg,
       rgba(224, 228, 232, 0.5) 0%,
       rgba(224, 228, 232, 1) 75%
     );
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 100px 15px;
     transition: transform var(--my-transition-duration)
@@ -300,7 +283,13 @@
     margin-bottom: 64px;
   }
   .header-nav-item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .ext-item a:first-child {
+    margin-bottom: 16px;
+  }
+  .ext-item a:not(:first-child) {
+    font-size: 16px;
   }
   .header-nav-link {
     display: block;
@@ -354,26 +343,64 @@
     margin-bottom: 30px;
   }
   .footer-nav-item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .footer-addres-item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
+/* @media screen and (max-width: 1199px) and (orientation: landscape) {
+  .header-nav-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .header-nav-item {
+    margin-bottom: 0;
+  }
+  .header-addres-list {
+    display: flex;
+    gap: 24px;
+
+    justify-content: center;
+  }
+} */
+
 @media screen and (min-width: 1200px) {
   /* ====================COMMON========================== */
-  .active-link {
+  .soft-skills-section,
+  .hard-skills-section,
+  .best-projects-section,
+  .portfolio-section {
+    scroll-margin-top: 88px;
+  }
+
+  .active-link,
+  .active-link-gallery {
     position: relative;
   }
   .active-link::after {
     position: absolute;
-    bottom: -35px;
+    bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
     content: "";
     width: 100%;
-    height: 3px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--my-color-1);
+  }
+  .active-link-gallery::after {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 100%;
+    height: 2px;
     border-radius: 1px;
     background-color: var(--my-color-1);
   }
@@ -390,14 +417,21 @@
 
   .header-nav-wrapper {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     flex: 1;
   }
 
   .header-nav-list {
     display: flex;
-    gap: 30px;
+    gap: 35px;
+  }
+  .ext-item a:first-child {
+    margin-bottom: 9px;
+  }
+  .ext-item a:not(:first-child) {
+    font-size: 13px;
+    /* line-height: 2.4; */
   }
 
   .nav-link {
@@ -410,7 +444,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    gap: 5px;
+    gap: 8px;
   }
 
   .address-link {
@@ -477,18 +511,14 @@
     font-size: 24px;
   }
   /* ====================SOFT-SKILLS========================== */
-  .soft-skills-section {
-    scroll-margin-top: 88px;
-  }
+
   .skills-title {
     font-size: 45px;
     margin-bottom: 40px;
   }
 
   /* ====================HARD-SKILLS========================== */
-  .hard-skills-section {
-    scroll-margin-top: 87px;
-  }
+
   .hard-skills-item {
     flex-basis: calc((100% - 48px) / 3);
   }

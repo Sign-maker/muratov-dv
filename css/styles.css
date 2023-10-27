@@ -169,6 +169,13 @@ body {
   overflow-y: hidden;
 }
 
+.soft-skills-section,
+.hard-skills-section,
+.best-projects-section,
+.portfolio-section {
+  scroll-margin-top: 64px;
+}
+
 /* ====================HEADER========================== */
 .header {
   background-color: var(--background-color-1);
@@ -206,8 +213,18 @@ body {
 }
 .header-nav-item {
 }
+.ext-item a {
+}
+.ext-item a span {
+}
+.ext-item a:first-child {
+}
+
+.ext-item a:not(:last-child) {
+}
+
 .nav-link {
-  /* display: block; */
+  display: block;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
@@ -215,7 +232,8 @@ body {
       var(--my-transition-timing-function),
     color var(--my-transition-duration) var(--my-transition-timing-function);
 }
-.active-link {
+.active-link,
+.active-link-gallery {
   color: var(--my-color-1);
   font-weight: 700;
 }
@@ -243,6 +261,7 @@ body {
   line-height: 1.4;
   transition: opacity var(--my-transition-duration)
     var(--my-transition-timing-function);
+  display: block;
 }
 .nav-link:is(:hover),
 .address-link:is(:hover, :focus) {
@@ -356,7 +375,6 @@ body {
 
 /* ====================SOFT-SKILLS========================== */
 .soft-skills-section {
-  scroll-margin-top: 64px;
   padding-top: 64px;
   padding-bottom: 64px;
   background-color: var(--background-color-1);
@@ -441,7 +459,6 @@ body {
 /* ====================HARD-SKILLS========================== */
 
 .hard-skills-section {
-  scroll-margin-top: 64px;
   padding-top: 64px;
   padding-bottom: 96px;
   background-color: var(--background-color-2);
@@ -461,6 +478,10 @@ body {
   position: relative;
   /* overflow: hidden; */
   margin-bottom: 10px;
+  background-color: var(--background-color-1);
+  background-image: url("../images/placeholder/img-placeholder400x400.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .proportion-type1 {
   padding-bottom: 56.25%;
@@ -473,6 +494,7 @@ body {
   height: 100%;
   transition: filter var(--my-transition-duration)
     var(--my-transition-timing-function);
+  color: transparent;
 }
 .skill-image-link:is(:hover, :focus) img {
   filter: brightness(0.7);
@@ -653,6 +675,9 @@ body {
   /* padding: 25px; */
   background-color: var(--background-color-1);
   /* outline: 1px solid rgba(100, 100, 100, 0.2); */
+  background-image: url("../images/placeholder/img-placeholder600x600.jpg");
+  background-size: cover;
+  background-position: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -672,6 +697,7 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  color: transparent;
 }
 
 #best-projects-carousel .f-button svg,
@@ -771,6 +797,10 @@ body {
 .portfolio-item {
   display: none;
   flex-basis: calc((100% - 6px) / 2);
+  background-color: var(--background-color-1);
+  background-image: url("../images/placeholder/img-placeholder400x400.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .show {
   display: block;
@@ -779,7 +809,7 @@ body {
 .portfolio-image {
   /* outline: 1px solid red; */
   position: relative;
-  background-color: var(--background-color-1);
+  /* background-color: var(--background-color-1); */
 }
 
 .proportion-type2 {
@@ -793,6 +823,7 @@ body {
   object-fit: cover;
   transition: filter var(--my-transition-duration)
     var(--my-transition-timing-function);
+  color: transparent;
 }
 
 .porfolio-page-img-link:is(:hover, :focus) img {

@@ -3,7 +3,14 @@ import debounce from "./debounce.js";
 export function navHandler() {
   document.addEventListener("DOMContentLoaded", onLoad);
 
-  function onLoad() {
+  function onLoad(event) {
+    // console.log(event);
+    const { target } = event;
+    event.preventDefault();
+    setTimeout(() => {
+      window.location = target.location.href;
+      // console.log("qqq");
+    }, 1000);
     const ACTIVE_LINK = "active-link";
     const navLinksWithHashRef = document.querySelectorAll(
       '.nav-link[href*="#"]'

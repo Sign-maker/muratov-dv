@@ -45,7 +45,7 @@ export function mobileMenuHandler() {
 
       setTimeout(() => {
         window.location = target.href;
-      }, 1000);
+      }, 100);
 
       body.classList.remove("lock");
       menu.classList.remove("active");

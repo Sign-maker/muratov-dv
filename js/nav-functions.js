@@ -10,7 +10,7 @@ export function navHandler() {
     setTimeout(() => {
       window.location.hash = target.location.hash;
       // console.log("qqq");
-    }, 500);
+    }, 1000);
     const ACTIVE_LINK = "active-link";
     const navLinksWithHashRef = document.querySelectorAll(
       '.nav-link[href*="#"]'

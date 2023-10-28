@@ -8,7 +8,7 @@ export function navHandler() {
     const { target } = event;
     event.preventDefault();
     setTimeout(() => {
-      window.location = target.location.href;
+      window.location.hash = target.location.hash;
       // console.log("qqq");
     }, 100);
     const ACTIVE_LINK = "active-link";

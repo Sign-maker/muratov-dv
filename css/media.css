@@ -323,7 +323,7 @@
   }
   .header-nav-item.ext-item a:not(:first-child) {
     position: relative;
-    background-color: rgba(242, 242, 242, 0.7);
+    background-color: rgba(230, 238, 238, 0.7);
   }
 
   .header-nav-link {

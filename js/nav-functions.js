@@ -6,7 +6,7 @@ export function navHandler() {
   function onLoad(event) {
     const ACTIVE_LINK = "active-link";
     const MAX_MOBILE_WIDTH = 1199;
-    const MAIN_PATH = "/index.html";
+    const MAIN_PAGE_ID = "main";
 
     const targetsRef = document.querySelectorAll("section[data-section-id]");
     const elForCompensationRef = document.querySelector("header");
@@ -41,12 +41,11 @@ export function navHandler() {
 
     function menuLinkHandler(event) {
       if (
-        !(
-          event.currentTarget.hash &&
-          (window.location.pathname === MAIN_PATH ||
-            window.location.pathname === "/")
-        )
+        !(event.currentTarget.hash && bodyRef.dataset.pageId === MAIN_PAGE_ID)
       ) {
+        if (isMobileMenuActive) {
+          menuVisibillityToggle();
+        }
         return;
       }
 

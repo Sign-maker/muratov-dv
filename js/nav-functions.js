@@ -37,10 +37,7 @@ export function navHandler() {
     }
 
     function menuLinkHandler(event) {
-      if (
-        event.currentTarget.pathname === "/index.html" &&
-        event.currentTarget.hash
-      ) {
+      if (event.currentTarget.hash) {
         event.preventDefault();
         const currentHash = event.currentTarget.hash.substring(1);
 

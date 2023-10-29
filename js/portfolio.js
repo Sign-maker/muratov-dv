@@ -1,7 +1,7 @@
 import { portfolioGalleryItems, paths } from "./portfolio-items.js";
 import { categories } from "./porfolio-categories.js";
 import { destroyFancybox, bindFancybox } from "./fancybox-functions.js";
-import { mobileMenuHandler } from "./mobile-menu.js";
+import { navHandler } from "./nav-functions.js";
 import { goTopBtnHandler } from "./go-top-btn.js";
 
 const {
@@ -33,7 +33,7 @@ const galleryItemsRef = document.querySelectorAll(
 );
 showGalleryForCategory(currentCategoryId);
 buttonsListRef.addEventListener("click", onBtnClick);
-mobileMenuHandler();
+navHandler();
 goTopBtnHandler();
 
 function filterButtonsMarkup(categories) {

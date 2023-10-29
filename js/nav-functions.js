@@ -6,6 +6,7 @@ export function navHandler() {
   function onLoad(event) {
     const ACTIVE_LINK = "active-link";
     const MAX_MOBILE_WIDTH = 1199;
+    const MAIN_PATH = "/index.html";
 
     const targetsRef = document.querySelectorAll("section[data-section-id]");
     const elForCompensationRef = document.querySelector("header");
@@ -15,7 +16,9 @@ export function navHandler() {
     const menuWrapperRef = document.querySelector(".header-nav-wrapper");
     const allMenuLinks = document.querySelectorAll(".nav-link, .address-link");
 
-    window.addEventListener("scroll", debounce(100, scrollHandler));
+    if (menuLinksRef) {
+      window.addEventListener("scroll", debounce(100, scrollHandler));
+    }
     menuBtnRef.addEventListener("click", menuVisibillityToggle);
     allMenuLinks.forEach((menuLink) =>
       menuLink.addEventListener("click", menuLinkHandler)
@@ -37,21 +40,29 @@ export function navHandler() {
     }
 
     function menuLinkHandler(event) {
-      if (event.currentTarget.hash) {
-        event.preventDefault();
-        const currentHash = event.currentTarget.hash.substring(1);
+      if (
+        !(
+          event.currentTarget.hash &&
+          (window.location.pathname === MAIN_PATH ||
+            window.location.pathname === "/")
+        )
+      ) {
+        return;
+      }
 
-        if (isMobileMenuActive) {
-          menuVisibillityToggle();
-        }
+      event.preventDefault();
+      const currentHash = event.currentTarget.hash.substring(1);
 
-        scrollToHash(currentHash);
-      } else if (isMobileMenuActive) menuVisibillityToggle();
+      if (isMobileMenuActive) {
+        menuVisibillityToggle();
+      }
+
+      scrollToHash(currentHash);
     }
 
     function menuVisibillityToggle() {
-      bodyRef.classList.toggle("lock");
       menuWrapperRef.classList.toggle("active");
+      bodyRef.classList.toggle("lock");
       menuBtnRef.classList.toggle("active-icon");
       isMobileMenuActive = !isMobileMenuActive;
       // console.log(isMobileMenuActive);
@@ -69,6 +80,9 @@ export function navHandler() {
     }
 
     function markActiveLinkById(linksRef, linkId) {
+      if (!menuLinksRef) {
+        return;
+      }
       linksRef.forEach((link) => {
         if (link.dataset.navId === linkId) {
           link.classList.add(ACTIVE_LINK);
@@ -100,8 +114,8 @@ export function navHandler() {
       markActiveLinkById(menuLinksRef, currentActiveLinkId);
     }
 
-    function scrollToHash(myHash) {
-      document.getElementById(myHash).scrollIntoView({
+    function scrollToHash(hash) {
+      document.getElementById(hash).scrollIntoView({
         behavior: "smooth",
         block: "start",
       });

@@ -4,35 +4,60 @@ export function navHandler() {
   document.addEventListener("DOMContentLoaded", onLoad);
 
   function onLoad(event) {
-    // console.log(event);
-    const { target } = event;
-    event.preventDefault();
-    setTimeout(() => {
-      window.location.hash = target.location.hash;
-      // console.log("qqq");
-    }, 1000);
     const ACTIVE_LINK = "active-link";
-    const navLinksWithHashRef = document.querySelectorAll(
-      '.nav-link[href*="#"]'
-    );
+    const MAX_MOBILE_WIDTH = 1199;
+
     const targetsRef = document.querySelectorAll("section[data-section-id]");
     const elForCompensationRef = document.querySelector("header");
     const menuLinksRef = document.querySelectorAll("[data-nav-id]");
-
-    // navLinksWithHashRef.forEach((anchor) =>
-    //   anchor.addEventListener("click", onAnchorClick)
-    // );
-
-    let currentActiveLinkId = getActiveTargetElId(targetsRef);
-    markActiveLinkById(menuLinksRef, currentActiveLinkId);
+    const bodyRef = document.querySelector("body");
+    const menuBtnRef = document.querySelector(".menu-burger-btn");
+    const menuWrapperRef = document.querySelector(".header-nav-wrapper");
+    const allMenuLinks = document.querySelectorAll(".nav-link, .address-link");
 
     window.addEventListener("scroll", debounce(100, scrollHandler));
+    menuBtnRef.addEventListener("click", menuVisibillityToggle);
+    allMenuLinks.forEach((menuLink) =>
+      menuLink.addEventListener("click", menuLinkHandler)
+    );
+    window.addEventListener("resize", windowResizeHandler);
 
-    function onAnchorClick(event) {
-      event.preventDefault();
-      const myHash = event.currentTarget.getAttribute("href").substring(1);
-      // markActiveLinkByHash(myHash);
-      scrollToHash(myHash);
+    let currentActiveLinkId = getActiveTargetElId(targetsRef);
+    let isMobileMenuActive = menuBtnRef.classList.contains("active")
+      ? true
+      : false;
+
+    markActiveLinkById(menuLinksRef, currentActiveLinkId);
+
+    function windowResizeHandler() {
+      const windowWidth = window.innerWidth;
+      if (windowWidth > MAX_MOBILE_WIDTH && isMobileMenuActive) {
+        menuVisibillityToggle();
+      }
+    }
+
+    function menuLinkHandler(event) {
+      if (
+        event.currentTarget.pathname === "/index.html" &&
+        event.currentTarget.hash
+      ) {
+        event.preventDefault();
+        const currentHash = event.currentTarget.hash.substring(1);
+
+        if (isMobileMenuActive) {
+          menuVisibillityToggle();
+        }
+
+        scrollToHash(currentHash);
+      } else if (isMobileMenuActive) menuVisibillityToggle();
+    }
+
+    function menuVisibillityToggle() {
+      bodyRef.classList.toggle("lock");
+      menuWrapperRef.classList.toggle("active");
+      menuBtnRef.classList.toggle("active-icon");
+      isMobileMenuActive = !isMobileMenuActive;
+      // console.log(isMobileMenuActive);
     }
 
     function getActiveTargetElId(targetsRef) {
@@ -84,13 +109,40 @@ export function navHandler() {
         block: "start",
       });
     }
-
-    function markActiveLinkByHash(currentAnchor) {
-      navLinksWithHashRef.forEach((navLink) => {
-        if (currentAnchor === navLink.getAttribute("href").substring(1)) {
-          navLink.classList.add(ACTIVE_LINK);
-        } else navLink.classList.remove(ACTIVE_LINK);
-      });
-    }
   }
 }
+
+// console.log(event);
+// const { target } = event;
+// event.preventDefault();
+// setTimeout(() => {
+//   window.location.hash = target.location.hash;
+//   // console.log("qqq");
+// }, 1000);
+
+// window.addEventListener("hashchange", onHashChange);
+
+// function onHashChange(event) {
+//   console.log(event);
+//   // event.preventDefault();
+//   const myHash = event.currentTarget.location.hash.substring(1);
+//   console.log(myHash);
+//   scrollToHash(myHash);
+// }
+
+// function onAnchorClick(event) {
+//   if (bodyRef.classList.contains("lock")) {
+//     return;
+//   }
+//   event.preventDefault();
+//   const myHash = event.currentTarget.getAttribute("href").substring(1);
+//   // markActiveLinkByHash(myHash);
+//   scrollToHash(myHash);
+// }
+// function markActiveLinkByHash(currentAnchor) {
+//   navLinksWithHashRef.forEach((navLink) => {
+//     if (currentAnchor === navLink.getAttribute("href").substring(1)) {
+//       navLink.classList.add(ACTIVE_LINK);
+//     } else navLink.classList.remove(ACTIVE_LINK);
+//   });
+// }

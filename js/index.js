@@ -4,7 +4,7 @@ import { bindFancybox, makeCarousel } from "./fancybox-functions.js";
 import { navHandler } from "./nav-functions.js";
 
 getCarousels();
-mobileMenuHandler();
+// mobileMenuHandler();
 goTopBtnHandler();
 bindFancyboxes();
 navHandler();

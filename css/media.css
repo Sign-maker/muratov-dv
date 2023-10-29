@@ -283,17 +283,47 @@
     margin-bottom: 64px;
   }
   .header-nav-item:not(:last-child) {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
-  .ext-item a:first-child {
-    margin-bottom: 16px;
+  .header-nav-item {
+    position: relative;
+    /* background-color: white; */
   }
-  .ext-item a:not(:first-child) {
+
+  .header-nav-item:last-child:after,
+  .header-nav-item::before,
+  .header-nav-item.ext-item a:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: rgb(93, 93, 93);
+  }
+
+  .header-nav-item.ext-item a:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .header-nav-item.ext-item a:first-child span {
+    writing-mode: vertical-lr;
+    display: block;
+  }
+
+  .footer-nav-item.ext-item a:not(:first-child),
+  .header-nav-item.ext-item a:not(:first-child) {
     font-size: 16px;
   }
+  .header-nav-item.ext-item a:not(:first-child) {
+    position: relative;
+    background-color: rgba(242, 242, 242, 0.7);
+  }
+
   .header-nav-link {
-    display: block;
-    text-align: center;
+    padding: 20px;
+    background-color: rgba(224, 228, 232, 0.7);
   }
   .header-addres-link {
     display: block;
@@ -302,6 +332,7 @@
   .header-addres-item:not(:last-child) {
     margin-bottom: 20px;
   }
+
   .menu-burger-btn {
     border: none;
     background-color: transparent;
@@ -345,6 +376,9 @@
   .footer-nav-item:not(:last-child) {
     margin-bottom: 30px;
   }
+  .footer-nav-item.ext-item a:first-child {
+    margin-bottom: 14px;
+  }
   .footer-addres-item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -382,17 +416,7 @@
   .active-link-gallery {
     position: relative;
   }
-  .active-link::after {
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    transform: translateX(-50%);
-    content: "";
-    width: 100%;
-    height: 2px;
-    border-radius: 1px;
-    background-color: var(--my-color-1);
-  }
+  .active-link::after,
   .active-link-gallery::after {
     position: absolute;
     bottom: -4px;
@@ -433,7 +457,9 @@
     font-size: 13px;
     /* line-height: 2.4; */
   }
-
+  .ext-item a:first-child span {
+    display: none;
+  }
   .nav-link {
     font-size: 16px;
   }
@@ -450,7 +476,10 @@
   .address-link {
     font-size: 16px;
   }
-
+  .nav-link:is(:hover),
+  .address-link:is(:hover, :focus) {
+    opacity: 0.6;
+  }
   .menu-burger-btn {
     display: none;
   }

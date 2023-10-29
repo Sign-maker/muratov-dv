@@ -30,6 +30,9 @@ export function mobileMenuHandler() {
 
     function menuClickHandler(event) {
       const { target } = event;
+      let currentHref;
+      console.dir(target);
+      console.dir(target.closest(".menu-link"));
       if (
         !(
           (
@@ -41,11 +44,27 @@ export function mobileMenuHandler() {
       ) {
         return;
       }
-      event.preventDefault();
-
-      setTimeout(() => {
-        window.location = target.href;
-      }, 100);
+      // console.log(
+      //   target.classList.contains("menu-link") || target.closest(".menu-link")
+      // );
+      // if (
+      //   !!(
+      //     target.classList.contains("menu-link") || target.closest(".menu-link")
+      //   )
+      // ) {
+      //   // Ждем, чтобы снялся класс lock. т.к при возникновении скролла в мобильном меню в портретно ориентации не происходит переход по якорю (сначала происходит переход , а страница скролится не может)
+      //   if (target.classList.contains("menu-link")) {
+      //     currentHref = target.href;
+      //   }
+      //   if (target.closest(".menu-link")) {
+      //     currentHref = target.closest(".menu-link").href;
+      //   }
+      //   console.log("fdsfdsf", currentHref);
+      //   // event.preventDefault();
+      //   // setTimeout(() => {
+      //   //   window.location = target.currentHref;
+      //   // }, 100);
+      // }
 
       body.classList.remove("lock");
       menu.classList.remove("active");

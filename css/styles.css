@@ -567,7 +567,7 @@ body {
   /* --f-button-active-bg: #f0f0f0; */
   --f-carousel-spacing: 12px;
   /* --f-carousel-slide-width: auto; */
-  --f-carousel-slide-width: calc((100%) / 1.2);
+  --f-carousel-slide-width: calc((100%) / 1.1);
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   #best-projects-carousel,
@@ -662,7 +662,10 @@ body {
   /* overflow: auto; */
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+
 #best-projects-carousel .f-carousel__slide,
 #best-projects-page-carousel-1 .f-carousel__slide,
 #best-projects-page-carousel-2 .f-carousel__slide,
@@ -686,13 +689,6 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-#best-projects-page-carousel-1 .f-carousel__slide:first-child {
-  /* margin-left: 50px; */
-}
-#best-projects-page-carousel-1 .f-carousel__slide:last-child {
-  /* margin-right: 50px; */
 }
 
 #best-projects-carousel .f-carousel__slide img,

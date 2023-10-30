@@ -1,10 +1,8 @@
-import { mobileMenuHandler } from "./mobile-menu.js";
+import { navHandler } from "./nav-functions.js";
 import { goTopBtnHandler } from "./go-top-btn.js";
 import { bindFancybox, makeCarousel } from "./fancybox-functions.js";
-import { navHandler } from "./nav-functions.js";
 
 getCarousels();
-// mobileMenuHandler();
 goTopBtnHandler();
 bindFancyboxes();
 navHandler();

@@ -323,7 +323,7 @@
   }
   .header-nav-item.ext-item a:not(:first-child) {
     position: relative;
-    background-color: rgba(230, 238, 238, 0.7);
+    background-color: rgba(234, 236, 238, 0.7);
   }
 
   .header-nav-link {
@@ -570,7 +570,9 @@
   .color-corection-item {
     flex-basis: calc((100% - 24px) / 2);
   }
-
+  .skill-image-link:is(:hover, :focus) img {
+    filter: brightness(0.7);
+  }
   /* ====================FOOTER========================== */
   .footer-container {
     padding-left: 50px;
@@ -602,5 +604,8 @@
   }
   .portfolio-item {
     flex-basis: calc((100% - 72px) / 4);
+  }
+  .porfolio-page-img-link:is(:hover, :focus) img {
+    filter: brightness(0.7);
   }
 }

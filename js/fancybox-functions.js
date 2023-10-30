@@ -32,6 +32,8 @@ export function makeCarousel(container) {
     Dots: false,
     center: true,
     infinite: false,
+    fill: false,
+    // slidesPerPage: 3,
 
     // Navigation: false,
 

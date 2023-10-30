@@ -7,6 +7,9 @@ export function navHandler() {
     const ACTIVE_LINK = "active-link";
     const MAX_MOBILE_WIDTH = 1199;
     const MAIN_PAGE_ID = "main";
+    const JS_ACTIVE = "active";
+    const JS_ACTIVE_ICON = "active-icon";
+    const JS_LOCK = "lock";
 
     const targetsRef = document.querySelectorAll("section[data-section-id]");
     const elForCompensationRef = document.querySelector("header");
@@ -26,7 +29,7 @@ export function navHandler() {
     window.addEventListener("resize", windowResizeHandler);
 
     let currentActiveLinkId = getActiveTargetElId(targetsRef);
-    let isMobileMenuActive = menuBtnRef.classList.contains("active")
+    let isMobileMenuActive = menuBtnRef.classList.contains(JS_ACTIVE)
       ? true
       : false;
 
@@ -60,9 +63,9 @@ export function navHandler() {
     }
 
     function menuVisibillityToggle() {
-      menuWrapperRef.classList.toggle("active");
-      bodyRef.classList.toggle("lock");
-      menuBtnRef.classList.toggle("active-icon");
+      menuWrapperRef.classList.toggle(JS_ACTIVE);
+      bodyRef.classList.toggle(JS_LOCK);
+      menuBtnRef.classList.toggle(JS_ACTIVE_ICON);
       isMobileMenuActive = !isMobileMenuActive;
       // console.log(isMobileMenuActive);
     }

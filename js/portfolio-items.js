@@ -1000,7 +1000,7 @@ export const portfolioGalleryItems = [
   },
   {
     nameNumber: "1023",
-    categoryId: "4",
+    categoryId: "3",
   },
   {
     nameNumber: "1042",

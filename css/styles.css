@@ -434,7 +434,9 @@ body {
 
 .best-projects-container,
 .portfolio-container {
-  max-width: 1920px;
+  max-width: 2560px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .best-project-title {
@@ -503,9 +505,6 @@ body {
   transition: filter var(--my-transition-duration)
     var(--my-transition-timing-function);
   color: transparent;
-}
-.skill-image-link:is(:hover, :focus) img {
-  filter: brightness(0.7);
 }
 
 /* ====================FOOTER========================== */
@@ -587,7 +586,7 @@ body {
     height: 300px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   #best-projects-carousel,
   #best-projects-page-carousel-1,
   #best-projects-page-carousel-2,
@@ -627,7 +626,7 @@ body {
     --f-carousel-spacing: 24px;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1550px) {
   #best-projects-carousel,
   #best-projects-page-carousel-1,
   #best-projects-page-carousel-2,
@@ -687,6 +686,13 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#best-projects-page-carousel-1 .f-carousel__slide:first-child {
+  /* margin-left: 50px; */
+}
+#best-projects-page-carousel-1 .f-carousel__slide:last-child {
+  /* margin-right: 50px; */
 }
 
 #best-projects-carousel .f-carousel__slide img,
@@ -834,9 +840,6 @@ body {
   color: transparent;
 }
 
-.porfolio-page-img-link:is(:hover, :focus) img {
-  filter: brightness(0.7);
-}
 /* ================GOTOP BTN =========*/
 .go-top {
   position: fixed; /* фиксированное позиционирование */
